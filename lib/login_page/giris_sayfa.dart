@@ -201,9 +201,6 @@ class _LoginPageState extends State<LoginPage> {
       maxLength: lenght,
       decoration: DecoratinStyle(text, shape),
       validator: Validator,
-      /* onChanged: (data2) {
-        save = data2;
-      },*/
       onSaved: onSaved,
       obscureText: gizle,
     );
@@ -338,7 +335,10 @@ class _LoginPageState extends State<LoginPage> {
         fontWeight: FontWeight.bold,
         fontSize: 12,
       ),
-      prefix: Icon(DataIcon, color: Colors.blue),
+      prefix: Icon(
+        DataIcon,
+        color: Colors.blue,
+      ),
       border: OutlineInputBorder(
         gapPadding: 5,
         borderRadius: BorderRadius.all(
