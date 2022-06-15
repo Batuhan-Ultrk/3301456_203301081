@@ -1,19 +1,31 @@
+// ignore_for_file: non_constant_identifier_names, avoid_init_to_null
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-
+import 'package:google_fonts/google_fonts.dart';
+// Uygulamada kullanılmıyor hoşuma gitmediği için kaldırdım.
 class OpeningPage extends StatelessWidget {
   const OpeningPage({Key? key}) : super(key: key);
+
+  TextStyle style(double size, Color colorss) {
+    return GoogleFonts.quicksand(
+      fontSize: size,
+      fontWeight: FontWeight.w900,
+      fontStyle: FontStyle.italic,
+      color: colorss,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      decoration: DecorationCreate(),
       child: GridView.count(
         crossAxisCount: 2,
         scrollDirection: Axis.vertical,
         primary: false,
-        padding: EdgeInsets.all(3),
+        padding: const EdgeInsets.all(3),
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: [
@@ -29,6 +41,12 @@ class OpeningPage extends StatelessWidget {
             "assets/images/opening_image/login.jpg",
             'Login Page',
             'Login Page',
+          ),
+          create(
+            context,
+            "assets/images/opening_image/signUp.jpg",
+            'Sign Up Page',
+            'Sign Up Page',
           ),
           create(
             context,
@@ -52,17 +70,11 @@ class OpeningPage extends StatelessWidget {
           ),
           create(
             context,
-            "assets/images/opening_image/yorum.jpg",
-            'PageCreate2',
-            'Yorum Page',
-            text: 'YORUMLAR',
+            "assets/images/opening_image/mitoloji.jpg",
+            'Mitoloji',
+            'Burc Mitoloji',
+            text: 'MİTOLOJİ',
           ),
-          /* create(
-            context,
-            "assets/images/opening_image/uyum.jpg",
-            'Burc Uyumu',
-            'Uyum Page',
-          ), */
           create(
             context,
             "assets/images/opening_image/logout.jpg",
@@ -70,6 +82,16 @@ class OpeningPage extends StatelessWidget {
             'EXİT',
           ),
         ],
+      ),
+    );
+  }
+
+  BoxDecoration DecorationCreate() {
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [Colors.purple, Colors.orangeAccent],
       ),
     );
   }
@@ -83,9 +105,9 @@ class OpeningPage extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             colors: [
-              Colors.orange,
+              Colors.blue,
               Colors.black,
             ],
             begin: Alignment.centerLeft,
@@ -97,67 +119,48 @@ class OpeningPage extends StatelessWidget {
             alignment: Alignment.center,
           ),
           border: Border.all(
-            color: Colors.orange,
+            color: Colors.black,
             width: 3,
           ),
           shape: BoxShape.circle,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
-              color: Colors.yellow,
+              color: Colors.white,
               offset: Offset(5, 5),
-              blurRadius: 20,
+              blurRadius: 30,
             ),
           ],
         ),
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Text(
             text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 22,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w900,
-            ),
+            style: style(22, Colors.white),
           ),
         ),
       ),
       onTap: () {
         if (page == 'EXİT') {
           exit(0);
-        } /* else if (page == 'PageCreate2') {
-          var secilen;
-          List<String> burcAd = Strings.BURC_ADLARI;
-          ControlCreate(
-            context,
-            burcAd,
-            secilen,
-            "Burç Yorumunu Getir",
-            page,
-            (data) {
-              secilen = data;
-            },
-            (String? veri) {
-              secilen = veri!;
-            },
-          );
-        }  */
-        else {
+        } else {
           bilgiler?[0] = '0';
+          debugPrint(bilgiler.toString());
           Navigator.pushNamed(context, page, arguments: bilgiler);
         }
       },
       onDoubleTap: () {
         if (page == 'EXİT') {
           exit(0);
+        } else {
+          bilgiler?[0] = '0';
+          Navigator.pushNamed(context, page, arguments: bilgiler);
         }
-        Navigator.pushNamed(context, page, arguments: bilgiler);
       },
       onLongPress: () {
         EasyLoading.showToast(
           toastText,
-          duration: Duration(
+          duration: const Duration(
             seconds: 3,
           ),
           toastPosition: EasyLoadingToastPosition.center,
@@ -165,100 +168,4 @@ class OpeningPage extends StatelessWidget {
       },
     );
   }
-
-/*   Future<dynamic> ControlCreate(
-    BuildContext context,
-    List<String> burcAd,
-    secilen,
-    String text,
-    String page,
-    void Function(String?)? onSaved,
-    void Function(String?)? onChanged,
-  ) {
-    secilen = Strings.BURC_ADLARI[0];
-    return showDialog(
-      barrierColor: Colors.orange,
-      context: context,
-      builder: (builder) => AlertDialog(
-        title: Text(
-          "Burç Seçiniz ",
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        content: DropdownButtonFormField(
-          value: Strings.BURC_ADLARI[0],
-          autofocus: true,
-          dropdownColor: Colors.orange,
-          iconSize: 27,
-          decoration: InputDecoration(
-            errorStyle: TextStyle(
-              color: Colors.orange,
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          icon: Icon(
-            Icons.details,
-            color: Colors.blue,
-          ),
-          alignment: Alignment.center,
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-          hint: Text(
-            'Burç Seçiniz',
-            style: TextStyle(
-              fontSize: 17,
-              color: Colors.blueGrey,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          items: burcAd
-              .map(
-                (String e) => DropdownMenuItem(
-                  child: Text(e),
-                  value: e,
-                ),
-              )
-              .toList(),
-          onSaved: onSaved,
-          onChanged: onChanged,
-        ),
-        actions: <Widget>[
-          Center(
-              child: Column(
-            children: [
-              ElevatedButton.icon(
-                label: Text(text),
-                icon: Icon(
-                  Icons.arrow_forward_ios_outlined,
-                ),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    page,
-                    arguments: secilen,
-                  );
-                },
-              ),
-              ElevatedButton.icon(
-                label: Text("GERİ DÖN"),
-                icon: Icon(
-                  Icons.arrow_back_ios_new,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          ))
-        ],
-      ),
-    );
-  } */
 }

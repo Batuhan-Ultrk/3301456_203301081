@@ -1,8 +1,11 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, non_constant_identifier_names, unused_local_variable
+
 import 'dart:io';
-import 'package:burc_rehberi/data/strings.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,50 +15,63 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String _username = '',
-      _pasword = '',
-      _eMail = '',
-      _burc = '',
-      _cinsiyet = '',
-      _aboutMe = '',
-      _number = '';
-  var bilgiler = null;
+  String? eMail, pasword;
+  var bilgiler = [];
+  TextEditingController? controlPassword = TextEditingController();
+  TextEditingController? controlEmail = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  late FirebaseAuth auth;
+  @override
+  void initState() {
+    auth = FirebaseAuth.instance;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () {
-        bilgiler = ['0'];
-        Navigator.pop(context, bilgiler);
-        return Future.value(true);
-      },
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Login'),
-          centerTitle: true,
-          elevation: 10,
-          leading: IconButton(
-            onPressed: () {
-              bilgiler = ['0'];
-              Navigator.pop(context, bilgiler);
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new_rounded,
-            ),
+    controlPassword?.text = pasword ?? '';
+    controlEmail?.text = eMail ?? '';
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Login',
+          style: style(
+            27,
+            Colors.white,
           ),
-          actions: [
-            IconButton(
-              tooltip: 'Çıkış',
-              onPressed: () {
-                exit(0);
-              },
-              icon: Icon(
-                Icons.exit_to_app_rounded,
-              ),
-            )
-          ],
         ),
-        body: SingleChildScrollView(
+        centerTitle: true,
+        elevation: 10,
+        leading: IconButton(
+          onPressed: () {
+            bilgiler = ['0'];
+            Navigator.pushReplacementNamed(context, 'Burc Listesi');
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.white,
+            size: 30,
+          ),
+        ),
+        actions: [
+          IconButton(
+            tooltip: 'Çıkış',
+            onPressed: () {
+              exit(0);
+            },
+            icon: const Icon(
+              Icons.exit_to_app_rounded,
+              color: Colors.white,
+              size: 25,
+            ),
+          )
+        ],
+      ),
+      body: Container(
+        decoration: DecorationCreate(),
+        height: double.infinity,
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Form(
@@ -63,24 +79,13 @@ class _LoginPageState extends State<LoginPage> {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 children: [
-                  SizedBoxCreate(),
-                  TextFromFieldCreate(
-                    'Username',
-                    (data) {
-                      if (data!.length < 4) {
-                        return 'Username en az 4 karakter olmalıdır.';
-                      } else {
-                        return null;
-                      }
-                    },
-                    (data) {
-                      _username = data!;
-                    },
-                    TextInputType.text,
-                    Icons.account_circle_sharp,
+                  const Divider(
+                    color: Colors.white,
+                    thickness: 4,
                   ),
                   SizedBoxCreate(),
                   TextFromFieldCreate(
+                    controlEmail,
                     'E Mail',
                     (data) {
                       if (EmailValidator.validate(data!)) {
@@ -90,63 +95,20 @@ class _LoginPageState extends State<LoginPage> {
                       }
                     },
                     (data) {
-                      _eMail = data!;
+                      eMail = data!;
                     },
+                    eMail,
                     TextInputType.emailAddress,
                     Icons.email_rounded,
                   ),
                   SizedBoxCreate(),
-                  TextFromFieldCreate(
-                    'Phone Number',
-                    (data) {
-                      if (data!.length < 11) {
-                        return 'Geçerli bir telefon numarası giriniz.';
-                      } else {
-                        return null;
-                      }
-                    },
-                    (data) {
-                      _number = data!;
-                    },
-                    TextInputType.number,
-                    Icons.phone_android_rounded,
-                    lenght: 11,
-                  ),
-                  SizedBoxCreate(),
-                  DropDownButtonCreate(
-                    [
-                      'Erkek',
-                      'Kadın',
-                    ],
-                    'Cinsiyet Seçiniz',
-                    _cinsiyet,
-                    (String? data) {
-                      _cinsiyet = data!;
-                    },
-                  ),
-                  SizedBoxCreate(),
-                  DropDownButtonCreate(
-                    Strings.BURC_ADLARI,
-                    'Burç Seçiniz',
-                    _burc,
-                    (String? data) {
-                      _burc = data!;
-                    },
+                  const Divider(
+                    color: Colors.white,
+                    thickness: 4,
                   ),
                   SizedBoxCreate(),
                   TextFromFieldCreate(
-                    'About Me',
-                    null,
-                    (data) {
-                      _aboutMe = data!;
-                    },
-                    TextInputType.text,
-                    Icons.data_saver_on_rounded,
-                    lenght: 100,
-                    line: 4,
-                  ),
-                  SizedBoxCreate(),
-                  TextFromFieldCreate(
+                    controlPassword,
                     'Password',
                     (data) {
                       if (data!.length < 8) {
@@ -156,26 +118,36 @@ class _LoginPageState extends State<LoginPage> {
                       }
                     },
                     (data) {
-                      _pasword = data!;
+                      pasword = data!;
+                      return null;
                     },
+                    pasword,
                     TextInputType.text,
                     Icons.password,
-                    gizle: true,
+                    gizle: false,
                   ),
-                  Row(
-                    children: [
-                      ElevatedButtonCreate(
-                        'Tüm Verileri Temizle',
-                        'Clear',
-                        Icons.clear_all_rounded,
-                      ),
-                      ElevatedButtonCreate(
-                        'Giriş Yap',
-                        'Login',
-                        Icons.login_rounded,
-                      ),
-                    ],
+                  SizedBoxCreate(),
+                  SizedBoxCreate(),
+                  const Divider(
+                    color: Colors.white,
+                    thickness: 4,
                   ),
+                  SizedBoxCreate(),
+                  SizedBoxCreate(),
+                  ElevatedButtonCreate(
+                    'Temizle',
+                    'Clear',
+                    Icons.clear_all_rounded,
+                  ),
+                  ElevatedButtonCreate(
+                    'Giriş Yap',
+                    'Login',
+                    Icons.login_rounded,
+                  ),
+                  SizedBoxCreate(),
+                  SizedBoxCreate(),
+                  SizedBoxCreate(),
+                  SizedBoxCreate(),
                 ],
               ),
             ),
@@ -186,15 +158,22 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   TextFormField TextFromFieldCreate(
+      TextEditingController? control,
       String text,
       String? Function(String?)? Validator,
       String? Function(String?)? onSaved,
+      String? gosterilecekVeri,
       TextInputType keyboardType,
       IconData shape,
       {int line = 1,
       int lenght = 100,
       bool gizle = false}) {
     return TextFormField(
+      controller: control,
+      readOnly: false,
+      style: style(18, Colors.white),
+      cursorColor: Colors.black,
+      cursorWidth: 2,
       keyboardType: keyboardType,
       textInputAction: TextInputAction.next,
       maxLines: line,
@@ -203,19 +182,20 @@ class _LoginPageState extends State<LoginPage> {
       validator: Validator,
       onSaved: onSaved,
       obscureText: gizle,
+      // initialValue: gosterilecekVeri,
     );
   }
 
-  Padding ElevatedButtonCreate(String toastText, String text, IconData shape) {
+  Widget ElevatedButtonCreate(String toastText, String text, IconData shape) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.only(left: 65, top: 8, bottom: 8),
       child: Container(
         alignment: Alignment.bottomLeft,
         child: ElevatedButton.icon(
           onLongPress: () {
             EasyLoading.showToast(
               toastText,
-              duration: Duration(
+              duration: const Duration(
                 seconds: 3,
               ),
               toastPosition: EasyLoadingToastPosition.center,
@@ -224,40 +204,29 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () {
             if (text == 'Clear') {
               _formKey.currentState!.reset();
+              eMail = '';
+              pasword = '';
+              setState(
+                () {},
+              );
             } else {
-              bool _validate = _formKey.currentState!.validate();
-              if (_validate) {
-                _formKey.currentState?.save();
-                bilgiler = [
-                  _username,
-                  _eMail,
-                  _number,
-                  _cinsiyet,
-                  _burc,
-                  _aboutMe,
-                  _pasword
-                ];
-                //  print(bilgiler);
-                Navigator.pushReplacementNamed(
-                  context,
-                  'Profile Page',
-                  arguments: bilgiler,
-                  result: bilgiler,
-                );
-              }
+              bool _validate = false;
+              _validate = _formKey.currentState!.validate();
+              _formKey.currentState?.save();
+              loginControl(_validate);
             }
           },
           label: Text(
             text,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
           icon: Icon(shape, color: Colors.white),
           style: ElevatedButton.styleFrom(
-            shape: StadiumBorder(),
+            shape: const StadiumBorder(),
             elevation: 17,
-            fixedSize: Size(130, 50),
+            fixedSize: const Size(210, 50),
             shadowColor: Colors.grey,
-            side: BorderSide(
+            side: const BorderSide(
               style: BorderStyle.solid,
               color: Colors.black,
             ),
@@ -268,94 +237,82 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   SizedBox SizedBoxCreate() {
-    return SizedBox(
+    return const SizedBox(
       height: 12,
-    );
-  }
-
-  DropdownButtonFormField<String> DropDownButtonCreate(List<String> Liste,
-      String text, String save, String? Function(String?)? onSaved) {
-    return DropdownButtonFormField(
-      validator: (data) {
-        if (data == null) {
-          return text + ' seçiniz.';
-        } else {
-          return null;
-        }
-      },
-      autofocus: true,
-      dropdownColor: Colors.orange,
-      iconSize: 27,
-      decoration: InputDecoration(
-        errorStyle: TextStyle(
-          color: Colors.orange,
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      icon: Icon(
-        Icons.details,
-        color: Colors.blue,
-      ),
-      alignment: Alignment.center,
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-      ),
-      hint: Text(
-        text,
-        style: TextStyle(
-          fontSize: 17,
-          color: Colors.blueGrey,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      items: Liste.map(
-        (String e) => DropdownMenuItem(
-          child: Text(e),
-          value: e,
-        ),
-      ).toList(),
-      onSaved: onSaved,
-      onChanged: (String? veri) {
-        setState(
-          () {
-            save = veri!;
-          },
-        );
-      },
     );
   }
 
   InputDecoration DecoratinStyle(String DataName, IconData DataIcon) {
     return InputDecoration(
-      errorStyle: TextStyle(
+      errorStyle: const TextStyle(
         color: Colors.orange,
         fontWeight: FontWeight.bold,
         fontSize: 12,
       ),
       prefix: Icon(
         DataIcon,
-        color: Colors.blue,
+        color: Colors.blueAccent,
       ),
-      border: OutlineInputBorder(
+      border: const OutlineInputBorder(
         gapPadding: 5,
         borderRadius: BorderRadius.all(
           Radius.circular(18),
         ),
+        borderSide: BorderSide.none,
       ),
       labelText: DataName,
-      labelStyle: TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
+      labelStyle: style(17, Colors.indigo),
       hintText: DataName,
-      hintStyle: TextStyle(
-        color: Colors.blueGrey,
-        fontSize: 17,
-        fontWeight: FontWeight.bold,
+      hintStyle: style(18, Colors.indigo),
+      filled: true,
+      fillColor: Colors.amber,
+    );
+  }
+
+  void Gonder(bool _validate) {
+    if (_validate) {
+      bilgiler = [eMail, '0'];
+      Navigator.pushReplacementNamed(
+        context,
+        'Profile Page',
+        arguments: bilgiler,
+        result: bilgiler,
+      );
+    }
+  }
+
+  BoxDecoration DecorationCreate() {
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [Colors.purple, Colors.orangeAccent],
       ),
     );
+  }
+
+  TextStyle style(double size, Color colorss) {
+    return GoogleFonts.quicksand(
+      fontSize: size,
+      fontWeight: FontWeight.w900,
+      color: colorss,
+    );
+  }
+
+  Future<void> loginControl(_validate) async {
+    try {
+      var _userControl = await auth.signInWithEmailAndPassword(
+          email: eMail!, password: pasword!);
+      Gonder(_validate);
+    } catch (e) {
+      debugPrint(e.toString());
+      EasyLoading.showToast(
+        'Kullanıcı Bulunamadı Lütfen Bilgilerinizi Kontrol ediniz',
+        duration: const Duration(
+          seconds: 3,
+        ),
+        toastPosition: EasyLoadingToastPosition.center,
+      );
+    }
   }
 }

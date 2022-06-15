@@ -4,17 +4,17 @@ class Burc {
   final String _burcDetay;
   final String _burcKucukResim;
   final String _buyukResim;
-  get burcAdi => this._burcAdi;
+  get burcAdi => _burcAdi;
 
-  set burcAdi(value) => this._burcAdi;
+  set burcAdi(value) => _burcAdi;
 
-  get burcTarihi => this._burcTarihi;
+  get burcTarihi => _burcTarihi;
 
-  get burcDetay => this._burcDetay;
+  get burcDetay => _burcDetay;
 
-  get burcKucukResim => this._burcKucukResim;
+  get burcKucukResim => _burcKucukResim;
 
-  get buyukResim => this._buyukResim;
+  get buyukResim => _buyukResim;
 
   Burc(this._burcAdi, this._burcTarihi, this._burcDetay, this._burcKucukResim,
       this._buyukResim);

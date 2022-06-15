@@ -1,4 +1,18 @@
+// ignore_for_file: constant_identifier_names
+
 class BurcUyum {
+  static const List<String> UYUM_GENEL_BASLIK = [
+    "ASTROLOJİ VE AŞK UYUMU",
+    "BURÇ UYUMU NEDİR?",
+    "BURÇ UYUMU NEYİ ANLATIYOR?",
+    "HANGİ BURÇLAR BİRBİRLERİYLE UYUMLU?",
+  ];
+  static const List<String> UYUM_GENEL = [
+    "Astrolojide ilişkiler ve aşk uyumu en ilgi çekici alanlardan biridir. Zira her birimiz farklı zaman ve coğrafyalarda gökyüzündeki o ana özgü sıra dışı gezegen, Güneş ve Ay dizilimleri altında doğarız ve başka biriyle karşılaştığımızda ve bir araya geldiğimizde o kişinin de göksel dizilimlerimi aramızdaki ilişkinin sırrını ve tılsımını oluşturur. Doğum haritalarımızın karşılıklı uyumunu inceleyen dala astrolojide sinastri adı verilmektedir. En doğru sinastri analizini yapabilmek için her iki kişinin doğum haritaları, doğdukları yere ve zamana göre çıkarılmış olmalıdır.",
+    "Elbette bu analizler her zaman mümkün olmadığında en tanıdık ve bilinen bilgiler olan burçlar ilişkisel uyum için bize en doğru bilgileri verebilir. Sözgelimi bir kişi Akrep burcuysa onu en iyi tamamlayan burç karşıt burcu Boğa olabilir. Aynı şeyi Terazi-Koç, İkizler-Yay, Yengeç-Oğlak, Kova-Aslan, Başak-Balık için de söylemek mümkündür. Her ne kadar bu biraz aşırı bir genelleme olsa da bu iki kişinin burçlarının yani haritalarındaki Güneş’lerinin birbiriyle karşılıklı şekilde konuştuklarını varsayabiliriz.",
+    "Mükemmel uyum için doğum haritalarında gezegenlerin birbirleriyle uyumu yanında bazı uyumsuzluklar da aranır. Aksi halde birbiriyle bire bir örten iki harita zaman içinde sıkıcı bir ilişkiyi beraberinde getirebilir. Zıtlıklar bu ilişkinin tuzu biberi ve ateşleyicisi olarak yer almak zorundadır",
+    "Elementler ve burçların temel nitelikleri de aşk uyumunda kilit rol oynayabilir. Yine özellikle doğru sinastriye varılabilecek doğum haritaları çıkartılamıyorsa bu daha da önemli hale gelecektir. Hava grubu burçlar kendi aralarında, toprak, ateş ve su grubu burçlar kendi aralarında güzel bir uyuma sahiptir. Terazi-İkizler-Kova (Hava üçlüsü), Başak-Boğa-Oğlak (Toprak üçlüsü), Yay-Aslan-Koç (Ateş üçlüsü), Balık-Yengeç-Akrep (Su Üçlüsü) kendi içinde oldukça uyumlu gruplardır. Bunun yanında toprak burçları su burçlarıyla, hava burçları ateş burçlarıyla güzel bir uyumu yakalayabilir. Burçların sabit, öncü ve değişken nitelikleri de benzer şekilde değerlendirmeye alınabilir. Elementlerin aksine iki sabit, öncü veya değişkenin birlikteliği zorlayıcı olabilirken bir sabit burçla kendi elementinden uyumlu bir değişken burç çok daha fazla uyumu olan bir ilişkiyi vaat edebilir.",
+  ];
   static const List<String> UYUM_AD = [
     "KADIN KOC - ERKEK KOC",
     "KADIN BOGA - ERKEK KOC",
@@ -28,8 +42,8 @@ class BurcUyum {
     "KADIN BOGA - ERKEK IKIZLER",
     "KADIN YENGEC - ERKEK BOGA",
     "KADIN BOGA - ERKEK YENGEC",
-    "KADIN BOĞA - ERKEK ASLAN",
-    "KADIN ASLAN - ERKEK BOĞA",
+    "KADIN BOGA - ERKEK ASLAN",
+    "KADIN ASLAN - ERKEK BOGA",
     "KADIN BASAK - ERKEK BOGA",
     "KADIN BOGA - ERKEK BASAK",
     "KADIN TERAZI - ERKEK BOGA",
@@ -69,6 +83,7 @@ class BurcUyum {
     "KADIN BASAK - ERKEK YENGEC",
     "KADIN YENGEC - ERKEK BASAK",
     "KADIN YENGEC - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK YENGEC",
     "KADIN AKREP - ERKEK YENGEC",
     "KADIN YENGEC - ERKEK AKREP",
     "KADIN YAY - ERKEK YENGEC",
@@ -80,6 +95,69 @@ class BurcUyum {
     "KADIN BALIK - ERKEK YENGEC",
     "KADIN YENGEC - ERKEK BALIK",
     "KADIN ASLAN - ERKEK ASLAN",
+    "KADIN BASAK - ERKEK ASLAN",
+    "KADIN ASLAN - ERKEK BASAK",
+    "KADIN ASLAN - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK ASLAN",
+    "KADIN AKREP - ERKEK ASLAN",
+    "KADIN ASLAN - ERKEK AKREP",
+    "KADIN ASLAN - ERKEK YAY",
+    "KADIN YAY - ERKEK ASLAN",
+    "KADIN OGLAK - ERKEK ASLAN",
+    "KADIN ASLAN - ERKEK OGLAK",
+    "KADIN ASLAN - ERKEK KOVA",
+    "KADIN KOVA - ERKEK ASLAN",
+    "KADIN BALIK - ERKEK ASLAN",
+    "KADIN ASLAN - ERKEK BALIK",
+    "KADIN BASAK - ERKEK BASAK",
+    "KADIN TERAZI - ERKEK BASAK",
+    "KADIN BASAK - ERKEK TERAZI",
+    "KADIN AKREP - ERKEK BASAK",
+    "KADIN BASAK - ERKEK AKREP",
+    "KADIN BASAK - ERKEK YAY",
+    "KADIN YAY - ERKEK BASAK",
+    "KADIN OGLAK - ERKEK BASAK",
+    "KADIN BASAK - ERKEK OGLAK",
+    "KADIN BASAK - ERKEK KOVA",
+    "KADIN KOVA - ERKEK BASAK",
+    "KADIN BALIK - ERKEK BASAK",
+    "KADIN BASAK - ERKEK BALIK",
+    "KADIN TERAZI - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK AKREP",
+    "KADIN AKREP - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK YAY",
+    "KADIN YAY - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK OGLAK",
+    "KADIN OGLAK - ERKEK TERAZI",
+    "KADIN KOVA - ERKEK TERAZI",
+    "KADIN TERAZI - ERKEK KOVA",
+    "KADIN TERAZI - ERKEK BALIK",
+    "KADIN BALIK - ERKEK TERAZI",
+    "KADIN AKREP - ERKEK AKREP",
+    "KADIN AKREP - ERKEK YAY",
+    "KADIN YAY - ERKEK AKREP",
+    "KADIN AKREP - ERKEK OGLAK",
+    "KADIN OGLAK - ERKEK AKREP",
+    "KADIN KOVA - ERKEK AKREP",
+    "KADIN AKREP - ERKEK KOVA",
+    "KADIN AKREP - ERKEK BALIK",
+    "KADIN BALIK - ERKEK AKREP",
+    "KADIN YAY - ERKEK YAY",
+    "KADIN YAY - ERKEK OGLAK",
+    "KADIN OGLAK - ERKEK YAY",
+    "KADIN KOVA - ERKEK YAY",
+    "KADIN YAY - ERKEK KOVA",
+    "KADIN BALIK - ERKEK YAY",
+    "KADIN YAY - ERKEK BALIK",
+    "KADIN OGLAK - ERKEK OGLAK",
+    "KADIN OGLAK - ERKEK KOVA",
+    "KADIN KOVA - ERKEK OGLAK",
+    "KADIN OGLAK - ERKEK BALIK",
+    "KADIN BALIK - ERKEK OGLAK",
+    "KADIN KOVA - ERKEK KOVA",
+    "KADIN BALIK - ERKEK KOVA",
+    "KADIN KOVA - ERKEK BALIK",
+    "KADIN BALIK - ERKEK BALIK",
   ];
   static const List<String> UYUM_YUZDE = [
     //KADIN KOC - ERKEK KOC
@@ -220,6 +298,8 @@ class BurcUyum {
     "%40",
     //KADIN YENGEÇ - ERKEK TERAZİ
     "%70",
+    //KADIN TERAZİ - ERKEK YENGEÇ
+    "%70",
     //KADIN AKREP - ERKEK YENGEÇ
     "%90",
     //KADIN YENGEÇ - ERKEK AKREP
@@ -242,6 +322,132 @@ class BurcUyum {
     "%100",
     //KADIN ASLAN - ERKEK ASLAN
     "%80",
+    //KADIN BAŞAK - ERKEK ASLAN
+    "%60",
+    //KADIN ASLAN - ERKEK BAŞAK
+    "%90",
+    //KADIN ASLAN - ERKEK TERAZİ
+    "%90",
+    //KADIN TERAZİ - ERKEK ASLAN"
+    "%100",
+    //KADIN AKREP - ERKEK ASLAN
+    "%80",
+    //KADIN ASLAN - ERKEK AKREP
+    "%80",
+    //KADIN ASLAN - ERKEK YAY
+    "%90",
+    //KADIN YAY - ERKEK ASLAN
+    "%90",
+    //KADIN OĞLAK - ERKEK ASLAN
+    "%60",
+    //KADIN ASLAN - ERKEK OĞLAK
+    "%40",
+    //KADIN ASLAN - ERKEK KOVA
+    "%70",
+    //KADIN KOVA - ERKEK ASLAN
+    "%50",
+    //KADIN BALIK - ERKEK ASLAN
+    "%80",
+    //KADIN ASLAN - ERKEK BALIK
+    "%30",
+    //KADIN BAŞAK - ERKEK BAŞAK
+    "%90",
+    //KADIN TERAZİ - ERKEK BAŞAK
+    "%80",
+    //KADIN BAŞAK - ERKEK TERAZİ
+    "%80",
+    //KADIN AKREP - ERKEK BAŞAK
+    "%70",
+    //KADIN BAŞAK - ERKEK AKREP
+    "%80",
+    //KADIN BAŞAK - ERKEK YAY
+    "%90",
+    //KADIN YAY - ERKEK BAŞAK
+    "%80",
+    //KADIN OĞLAK - ERKEK BAŞAK
+    "%80",
+    //KADIN BAŞAK - ERKEK OĞLAK
+    "%100",
+    //KADIN BAŞAK - ERKEK KOVA
+    "%30",
+    //KADIN KOVA - ERKEK BAŞAK
+    "%70",
+    //KADIN BALIK - ERKEK BAŞAK
+    "%40",
+    //KADIN BAŞAK - ERKEK BALIK
+    "%100",
+    //KADIN TERAZİ - ERKEK TERAZİ
+    "%70",
+    //KADIN TERAZİ - ERKEK AKREP
+    "%50",
+    //KADIN AKREP - ERKEK TERAZİ
+    "%50",
+    //KADIN TERAZİ - ERKEK YAY
+    "%60",
+    //KADIN YAY - ERKEK TERAZİ
+    "%100",
+    //KADIN TERAZİ - ERKEK OĞLAK
+    "%80",
+    //KADIN OĞLAK - ERKEK TERAZİ
+    "%80",
+    //KADIN KOVA - ERKEK TERAZİ
+    "%70",
+    //KADIN TERAZİ - ERKEK KOVA
+    "%90",
+    //KADIN TERAZİ - ERKEK BALIK
+    "%10",
+    //KADIN BALIK - ERKEK TERAZİ
+    "%70",
+    //KADIN AKREP - ERKEK AKREP
+    "%80",
+    //KADIN AKREP - ERKEK YAY
+    "%40",
+    //KADIN YAY - ERKEK AKREP
+    "%60",
+    //KADIN AKREP - ERKEK OĞLAK
+    "%90",
+    //KADIN OĞLAK - ERKEK AKREP
+    "%60",
+    //KADIN KOVA - ERKEK AKREP
+    "%30",
+    //KADIN AKREP - ERKEK KOVA
+    "%40",
+    //KADIN AKREP - ERKEK BALIK
+    "%90",
+    //KADIN BALIK - ERKEK AKREP
+    "%80",
+    //KADIN YAY - ERKEK YAY
+    "%40",
+    //KADIN YAY - ERKEK OĞLAK
+    "%70",
+    //KADIN OĞLAK - ERKEK YAY
+    "%80",
+    //KADIN KOVA - ERKEK YAY
+    "%90",
+    //KADIN YAY - ERKEK KOVA
+    "%80",
+    //KADIN BALIK - ERKEK YAY
+    "%50",
+    //KADIN YAY - ERKEK BALIK
+    "%30",
+    //KADIN OĞLAK - ERKEK OĞLAK
+    "%90",
+    //KADIN OĞLAK - ERKEK KOVA
+    "%50",
+    //KADIN KOVA - ERKEK OĞLAK
+    "%40",
+    //KADIN OĞLAK - ERKEK BALIK
+    "%90",
+    //KADIN BALIK - ERKEK OĞLAK
+    "%40",
+    //KADIN KOVA - ERKEK KOVA
+    "%50",
+    //KADIN BALIK - ERKEK KOVA
+    "%30",
+    //KADIN KOVA - ERKEK BALIK
+    "%80",
+    //KADIN BALIK - ERKEK BALIK
+    "%100",
   ];
 
   static const List<String> UYUM_YUZDE_DETAY = [
@@ -452,6 +658,9 @@ class BurcUyum {
     //KADIN YENGEÇ - ERKEK TERAZİ
     "Yengeç kadını Terazi erkeğinin hoş, çekici ve dayanılmaz cazibesinin karşısında kayıtsız kalamaz. Ancak Terazi`nin sürekli dış dünya ile ilişki içinde olması, Yengeç'in daha içe dönük ve ailesine bağlı yapısı aralarında sorun oluşturabilir. Terazi erkeğinin ise eğlenceye ve insanlara ihtiyacı vardır. Terazi burcu geleceğini pek düşünmez ya da düşündüğü kadarı Yengeç kadını için yeterli olmayabilir. Uzun vadede çıkan sorunlara ortaklaşa çözüm bulunmazsa bu ilişkinin ömrü kısa olabilir.",
 
+    //KADIN TERAZİ - ERKEK YENGEÇ
+    "Terazi ve Yengeç arasında pek uyumlu bir birlikteliğin olacağı söylenemez. Yengeç erkeği duygusal ve hassastır. Terazi kadını da aynı şekilde romantiktir. Ama iki taraf da duygularını dile getirme konusunda çekingen davranacağından sıkıntılar ortaya çıkabilir. Seksüel açıdan Yengeç oldukça arzulu ve tutkuludur. Aralarında büyük bir aşk varsa ve kişilik olarak zıtlıklar yoksa ilişki yürüyebilir.",
+
     //KADIN AKREP - ERKEK YENGEÇ
     "Akrep ve Yengeç arasında uyumlu bir ilişki olabilir. Her iki burç da su grubundandır. Dolayısıyla ortak özellikleri oldukça fazladır. Yengeç hassas, duygusal ve romantiktir. Akrep ise tutkulu, akıllı, duygusal ve açık sözlüdür. Kendine oldukça güvenir. Etkileyici bir dış görünümü vardır. Eğer severse tutkulu bir aşık olacaktır. Yengeç burcu oldukça anlayışlı olduğundan Akrep burcunun öfke nöbetlerinin geçmesini sabırla bekleyecek ve alttan alacaktır. Özellikle Akrep kadınının karşı konulmaz bir seksüel cazibesi vardır. Bu nedenle uyumlu bir ilişki yakalamaları mümkündür.",
 
@@ -484,10 +693,199 @@ class BurcUyum {
 
     //KADIN ASLAN - ERKEK ASLAN
     "İki Aslan arasında çok uyumlu bir ilişki olabileceği gibi tamamen uyumsuz bir ilişki de olabilir. Hem kadın, hem erkek burç ateş grubudur ve aynı burçtan kadın ve erkeğin birçok ortak noktası olabilir. Her ikisi de hareketli, neşeli, girişken ve romantiktir. Hayatın güzelliklerine, gösterişe ve lükse oldukça düşkündür. Aynı zamanda da gururludur. Birbirlerine anlayış gösterdikleri ve karşı tarafı baskı altına almaya çalışmadıkları müddetçe ilişkileri yürüyebilir.",
+
+    //KADIN BAŞAK - ERKEK ASLAN
+    "Aslan kadını hareketli, neşeli, girişken ve romantiktir. Hayatın güzelliklerine, gösterişe ve lükse oldukça düşkündür. Aynı zamanda da gururludur. Başak erkeği ise sevecen, iyi niyetli, güvenilir ve detaycıdır. Bir kez sevdiği zaman güvenilir ve sadık bir aşık olacaktır. İkisi arasındaki ilişkinin çok uyumlu olacağı söylenemez ama birbirlerine anlayış gösterirlerse iyi bir ilişkileri olabilir.",
+
+    //KADIN ASLAN - ERKEK BAŞAK
+    "Başak ve Aslan arasında uyumlu bir ilişki olabilir. Başak akıllı, sevecen, iyi niyetli ve detaycıdır. Aslan ise korumacı, sevecen, duygusal ve hareketli bir yapıya sahiptir. Aslan erkeğinin çalışkanlığı, gururlu duruşu Başak kadınını etkiler. Aslan'ın pohpohlanmak ihtiyacını Başak fark eder ve karşılarsa, Aslan'ın onun için yapamayacağı şey kalmaz. Her iki taraf da seksüel yönden oldukça arzuludur. Aralarındaki dengeyi karşılıklı fedakarlıklarla korurlarsa, ömür boyu bir birliktelik yaşayabilirler.",
+
+    //KADIN ASLAN - ERKEK TERAZİ
+    "Terazi erkeği neşelidir ve Aslan kadınına çok iyi gelir. Aslan kadını da neşeli, girişken ve romantik tavırlarıyla Terazi erkeğini kolayca etkisi altına alır. Bu iki burcun insanı aşk hayatında çok iyi anlaşacakları gibi iki iyi de arkadaş olacaktır. Tek sorun Aslan burcunun gururunun ön plana çıkması olabilir. Bu durumda da Terazi'nin dengeleyici bir tutum içine girmesi gerekir.",
+
+    //KADIN TERAZİ - ERKEK ASLAN
+    "Aslan erkeği neşeli, girişken ve zekidir. Terazi kadını ise zarifliği ve duygusallığıyla dikkat çeker. Bu ikilinin birlikteliği gayet uyumlu ve uzun süreli olacaktır. Aslan erkeği kişiliği ve cazibesiyle Terazi'yi kolayca etkisi altına alır. İlişkinin ilerleyen zamanlarında Aslan erkeği gururunu ön plana çıkararak baskıcı tavırlar izlemeye başlayabilir ancak Terazi bunu dengelemeyi bilecektir. Her iki taraf da seksüel açıdan tutkuludur ve bu ikilinin ilişkisine “iyi” demek az olur!",
+
+    //KADIN AKREP - ERKEK ASLAN
+    "Aslan burcu, yoğun duygularla dolu ve tutkulu bir aşık olan Akrep burcunun büyüsüne çabuk kapılacaktır. Bu iki burcun ilişkilerini zorlayacak en önemli nokta her ikisinin de sabit fikirli olması ve kararlarından vazgeçmemesi olacaktır. Akrep burcu sevdiği zaman tüm benliği ile sevdiğinden bu durum Aslan burcunun çok hoşuna gidecektir. Bir kavga anında her iki taraf da kararlarından vazgeçmediğinden barışmaları kimi zaman zor olacaktır ancak her iki taraf da sevdiğine sadık olduğundan uzun ömürlü bir ilişki olması kuvvetle muhtemeldir.",
+
+    //KADIN ASLAN - ERKEK AKREP
+    "Akrep erkeğinin sihirli çekim gücü Aslan kadınını kolayca etkisi altına alacaktır. İkisi arasında uyumlu ve tutkulu bir ilişki olabilir. Yalnız Akrep'in ikili ilişkilerde fazlaca kıskanç olması ilişkinin yıpratıcı olmasına ve zarar görmesine sebep olabilir. Aslan kadını da Akrep'i baskı altına almaya çalışmamalı ve ona hükmetmeye kalkmamalıdır. Çünkü beklemediği kadar sert bir tepkiyle karşılaşabilir.",
+
+    //KADIN ASLAN - ERKEK YAY
+    "Yay erkeği, her zaman macera ve meydan okuma arayışındadır. Gittiği her yerde gözü pek davranışlarda bulunabilir. Cesaret ve atılganlığı Aslan kadınının oldukça hoşuna gider. Bunun yanı sıra, sorumsuzluk ve duyarsızlığı da söz konusudur. İki ayrı mizaca sahip bu iki kişi, şaşırtıcı bir şekilde çok iyi anlaşabilir. Hatta uzun vadede evliliğe dönüşebilecek uyumlu bir birliktelik olacaktır.",
+
+    //KADIN YAY - ERKEK ASLAN
+    "Birlikte sekste mükemmel bir uyum yakalayabilirsiniz. Her iki burç da Ateş grubudur ve birbirlerine çok benzerler. Aslan erkeği neşeli, girişken ve romantiktir. Ayrıca lükse düşkünlüğüyle bilinir. Yay kadını da eğlenmeyi, gezmeyi seven neşeli bir karakterdir. Bu iki burç birbirini adeta tamamlar. Önce çok iyi iki dost ardından da sevgili olabilirler. Uzun vadede evliliğe dönüşebilecek uyumlu bir ilişki olacaktır.",
+
+    //KADIN OĞLAK - ERKEK ASLAN
+    "Aslan erkeği cömert, aristokrat ruhlu, girişken ve romantiktir. Hayatın güzelliklerine ve lükse çok düşkündür. Oğlak kadını ise sevdiği kişiye her konuda destek olan, duygusal ve düşünceli bir yapıdadır. Sevdiği kişiyi fazla sahiplenir ve kıskanır. Bu ikilinin mutlu olmasının tek koşulu özveridir. Eğer ikiniz de hayat tarzlarınızda değişiklik yapabilir ve birbirinizin isteklerine cevap verebilirseniz uzun vadede uyumlu bir birliktelik yaşayabilirsiniz.",
+
+    //KADIN ASLAN - ERKEK OĞLAK
+    "Cömert ve aristokrat Aslan ile hırslı ve işkolik Oğlak burçlarının birlikteliği mümkün, ancak iki tarafında da elinden geleni yapması şart. Aslan kadını romantik, neşeli, girişken ve lüks meraklısıdır. Oğlak erkeği ise Satürn tarafından yönetilir, tedbirlidir ve hayatı çok ciddiye alır. İki burcun insanı çok farklı olsa da birbirine iyi gelir. Seksüel açıdan da birbirlerinin isteklerini karşılarlar. Biraz çabayla uzun vadede uyumlu bir ritm yakalayabilirler.",
+
+    //KADIN ASLAN - ERKEK KOVA
+    "Kova erkeğinin sevgi konusundaki ısrarı ve sabrı, Aslan kadınını etkiler. Kova erkeği idealisttir, belirgin bir duyarlılığı vardır, bu nedenle birbirlerini tamamlayacaklardır. Aslan kadını, onu ütopyalar aleminden alarak, gerçekler dünyasına indirecek kişidir. Birbirlerinden her durumda çok şey öğrenebilirler. Ortak ve farklı noktaları onları dengede tutar. Kova'nın Aslan'ın gururunu sürekli okşaması ve ikilinin kişilik çatışmalarından uzak durmaları şartıyla ilişkileri evliliğe kadar gidebilir.",
+
+    //KADIN KOVA - ERKEK ASLAN
+    "Kendini bulunduğu ortamın lideri olarak gören Aslan burcu genel olarak Kova burcuyla uyumlu bir ilişki gösteremez. İki tarafın da birlikte olabilmesi için gerekli olan kıvılcımı beklemek kova burcu için eziyet gibidir. Herkesin dikkatini çeken Kova burcu, bir Aslan burcunun dikkatini çekemediğinde sinirlenir, uzun bir süre uğraştıktan sonra da pes eder. Kova burçları ilişkide asla ve asla aldatmaya yönelik bir hareket sergilemezler. Başka birinin varlığını hissettiklerinde bile ilişkiyi kesebilir, yeni bir şans vermeyebilirler. Bu iki burcun ilişkisi tarafların duygusal tavırlarına göre olumlu ya da olumsuz şeklini alacaktır.",
+
+    //KADIN BALIK - ERKEK ASLAN
+    "Balık ile Aslan burcunun ortak özelliklerinden ilki ikisinin de yaratıcı burçlar olmasıdır. Balık burcunu Aslan burcuna hayran bırakan en temel özellik Aslan burcunun sahip olduğu cömertlik ve ihtişamdır. İki burç da sanat ve edebiyata çok önem verir. Aslan burcu Balık burcuna cesur olma konusunu öğretirken Balık burcu ise Aslan'a kurnaz olmayı öğretebilir. Aslan'ın hareketli ve dışa dönük kişiliği bu ilişkiyi dengeleyecektir. Uzun vadede uyumlu ve güzel bir ilişki yakalamaları mümkündür.",
+
+    //KADIN ASLAN - ERKEK BALIK
+    "Aslan ve Balık birbirinden çok farklı iki burçtur ve bir araya gelmeleri oldukça zordur. Aslan kadını hareketli, neşeli ve girişkendir. Balık erkeği ise duygusal, hassas ve romantiktir. Balık burcu ince düşünür ve hayalperesttir. Aslanlar ise başkalarının duygularına fazla önem vermezler. Yine de birbirlerine birçok konuda destek olacakları düşünülürse, kısa vadeli ve tutkulu bir birliktelik yaşayabilirller.",
+
+    //KADIN BAŞAK - ERKEK BAŞAK
+    "İki Başak burcu arasında son derece uyumlu bir ilişki yaşanabilir. Karakter özellikleri birbirine çok benzeyeceğinden, ikisinin de rahatlarına çok düşkün olması kimseyi rahatsız etmeyecektir. Yaşadıkları yerlerde titizliğe çok önem verecek, düzen konusunda birbirlerinin alanlarına girmeyeceklerdir. Birbirlerinin zayıf ve güçlü yanlarını bildiklerinden aralarında çatışma çıkma olasılığı zayıf olacaktır. Çocuklara olan düşkünlükleri onları birbirine bağlayacak, uzun süreli uyumlu bir ilişki yaşayacaklardır.",
+
+    //KADIN TERAZİ - ERKEK BAŞAK
+    "Başak erkeği titiz, tutumlu, düzenlidir. Abartılı titizliği sizi zaman zaman çileden çıkarabilir. O ise Terazi kadının gizemli yapısından etkilenecektir. Terazi ve Başak ikilisinin ilişkisi kolay olmayacaktır ama çok keyifli olabilir. Farklılıklarınızı kabul eder, birbirinizi delicesine eleştirmez ve saygı sınırlarını aşmazsanız, birlikte çok eğlenebilir ve birbirinizden çok şey öğrenebilirsiniz.",
+
+    //KADIN BAŞAK - ERKEK TERAZİ
+    "Başak burcu kişilik özellikleriyle, Terazi'yi fazlasıyla etkisi altına alır. Terazi de renkli kişiliği ve samimi tavırlarıyla Başak için eğlenceli bir partnerdir. Terazi ince ruhlu ve anlayışlıdır. İyi bir sevgilinin yanı sıra iyi bir dinleyici ve iyi bir dost olur. Fakat duygularını kolay kolay belli etmez. Dolayısıyla Başak, Terazi'nin bu gizemli yönünden etkilenir. Başak'ın, Terazi'yi elinde tutabilmesi için duygu ve düşüncelerini yumuşak bir dille ifade etmesi gerekmektedir. Uzun vadede eğlenceli ve uyumlu bir ilişkileri olabilir.",
+
+    //KADIN AKREP - ERKEK BAŞAK
+    "Başak burcu ve Akrep burcunun birlikteliği çok gizemli olabilir. Başak burcu Akrep burcunu çözdüğünü sanır. Ancak onu en çok çözdüğünü sandığı anda akrep burcu onu şaşırtacaktır. Akrep hükmetmeyi sever. Fakat Başak eşitlikçi bir yapıya sahip olduğu için bu durumu kolay kolay kabullenemeyecektir. Anlaşmazlıklar yaşanması muhtemeldir. Seksüel açıdan Akrep fazlasıyla arzulu ve tutkuludur. Fakat Başak için öncelik romantizmdir. Aralarında gerçek bir sevgi varsa uzun süreli bir ilişki olabilir.",
+
+    //KADIN BAŞAK - ERKEK AKREP
+    "Başak burcu ve Akrep burcu ilişkisinde Başak burcunun Akrep burcundan öğreneceği çok şey vardır. Akrep tutkulu, akıllı, duygusal ve açık sözlüdür. Kendine oldukça güvenir. Etkileyici bir dış görünümü vardır. Eğer severse tutkulu bir aşık olacaktır. Başak, Akrep'in cazibesinden fazlasıyla etkilenecektir. Bu ikilinin birliktelikleri hem duygusal, hem tutkulu hem de şehvetli olacaktır. Akrep burcu, Başak burcuna hayal edemeyeceği duyguları yaşatacaktır. Bu da Başak burcunun Akrep burcuna olan bağlılığını arttıracaktır. Başak burcu ilişkide güven arar, aradığı güven ve sadakati ona akrep burcu verecektir.",
+
+    //KADIN BAŞAK - ERKEK YAY
+    "Bu iki tip birbirini adeta tamamlar ve çok iyi anlaşır. Öncelikle çok iyi iki dost ve ardından da iyi iki sevgili olacaklardır. Güven ve sadakate ihtiyaç duyan Başak'ı, Yay bir nebze de olsa korkutabilir. Fakat kişisel özgürlüklere fazla müdahale edilmezse Yay bunun karşılığını ilişkiye sahip çıkarak verecektir. Seksüel açıdan her iki taraf da romantik ve arzuludur. Başak burcu ve yay burcu ilişkisinde her iki taraf da bağımsız olduğundan birini bile uzun bir ilişkide tutmak oldukça zor olacaktır.",
+
+    //KADIN YAY - ERKEK BAŞAK
+    "Başak erkeği, güvenilir, detaycı, akıllı ve sevecendir. Birini sevdiği zaman güvenilir ve sadık bir aşık olur. Yay kadını ise güvenilir, neşeli, zeki ve dışa dönüktür. Bu iki burç önce çok iyi iki dost, ardından da iyi iki sevgili olacaktır. Cinsel yönden de frekansları uyuşur. İki taraf da romantik ve arzulu olduğu için birlikte uzun vadede eğlenceli ve uyumlu bir aşk yaşayabilirler.",
+
+    //KADIN OĞLAK - ERKEK BAŞAK
+    "Oğlak ve Başak arasında uyumlu bir ilişki yaşanabilir. Başak erkeği iyi niyetli, güvenilir ve detaycıdır. O, sizi meşgul edecek heyecanlı erkeklerden değildir, tersine yanında kendinizi rahat ve mutlu hissetmenizi sağlayacaktır. Bu iki burcun hayattan beklentileri benzer olduğu için kolay anlaşırlar. Hem Başak hem de Oğlak çekingen insanlar oldukları için birbirlerine yaklaşmaları zaman alsa da birbirlerini bulduklarında uzun vadede evliliğe doğru gidecek bir ilişkiye doğru yol alabilirler.",
+
+    //KADIN BAŞAK - ERKEK OĞLAK
+    "Başak burcu ve Oğlak burcu çifti uyumlu bir çift olacaktır. Özellikle Başak burcu için Oğlak burcu ideal bir eştir. Her iki burcun da toprak grubunda olması benzer özellikler taşıdıklarını ve birbirlerini anlayacaklarını gösterir. Oğlak erkeğinin gerçekten sevince yapmayacağı fedakarlık yoktur. Her konuda sevdiği kişiye destek olur. Başak burcu eğer başarabilirse oğlak burcunun kalbinde taht kuracaktır. Sevdiğine tamamen bağlı olan Oğlak burcu, Başak burcuna aşkın farklı taraflarını öğretecek ve yaşatacaktır..",
+
+    //KADIN BAŞAK - ERKEK KOVA
+    "Başak burcu ve Kova burcu birbirinden tamamen farklı karakterler olmakla beraber, bu ikilinin birliktelikleri kendisinden tamamen farklı biriyle olma isteğinden doğacaktır. Kova duygusal ve bir o kadar da değişken bir kişiliğe sahiptir. Sürekli bir değişim halindedir. Sürekli değişik ortamlarda, değişik kişilerle olmaktan keyif alır. Her iki tipin de ilişkiden ve hayattan beklentileri farklıdır. Kova, Başak burcuna güven vermez. Seksüel açıdan da beklentileri pek birbirlerine uymaz. Uzun vadede uyumlu bir ilişki yakalamaları zordur.",
+
+    //KADIN KOVA - ERKEK BAŞAK
+    "Kova burcunu anlamak diğer burçlarda da olduğu gibi başak burcu için de oldukça zor olacaktır. Başak burcu kova burcunu özgür bıraktığı sürece onu daha yakından tanır, ona göre davranır ise kova da bu ölçüde ona yakınlaşacaktır. Özgürlüğünü hissetmek Kova burcu için çok önemlidir. Karşısında kendisi gibi hareketli, detaycı ama bir o kadar da anlayışlı bir Başak burcu gördüğü takdirde sizi el üstünde tutacaktır. Bu şartlar sağlandığı takdirde Kova burcunun Başak burcu ile hoş bir ilişkiye başlamaması için bir sebep yoktur.",
+
+    //KADIN BALIK - ERKEK BAŞAK
+    "Başak burcu Balık burcunun ihtiyacı olan şeyleri belirler bu ihtiyaçları gidermek için canla başla çalışır. Başak, Balık'ın hayal dünyasının genişliğine hayranlık duyar ve onun yanında olmaktan mutluluk duyar. Başak burcu idealist bir burçtur. Kimsenin görmediğini görür. İnce ayrıntılara önem verir. Eleştirici bir kimliği vardır. Balık ise baktığı her şeye güzel gözle baktığı için güzellik görür. Başak burcunun eleştirilerinden incinebilir. Bu anlamda Başak burcu daha dikkatli konuşmaya dikkat etmelidir.",
+
+    //KADIN BAŞAK - ERKEK BALIK
+    "Başak burcu ile Balık burcu beraberliği oldukça romantik bir beraberlik olacaktır. Bu iki burç karşılıklı olarak birbirlerinin ihtiyaç duydukları özelliklere sahiptirler. Balık burcu Başak burcuna ihtiyaç duyar. Sezgileri oldukça gelişmiş Balık burcu, Başak burcunun içinden gelenleri bilecektir ve ona göre hareket edecektir. Balık burcunun anlayışlı ruhu, Başak burcunu kendisine hayran bırakacaktır. Toprak grubundaki Başak ile su grubundaki Balık anlaşmakta zorlanmadıklarından ilişkileri de oldukça uyumlu olacaktır.",
+
+    //KADIN TERAZİ - ERKEK TERAZİ
+    "Terazi kadını ve erkeğinin birçok ortak yönü vardır. İkisi de yeni yerler keşfedip yeni kişilerle tanışmayı seven dışa dönük ve hareketli kişilerdir. Ayrıca sevecen, samimi, sadık ve duygusal olurlar. Birbirine benzer bu iki kişinin aşka bakış açısı da aynıdır. Ancak bir süre sonra bu benzerlikler ilişkinin monotonlaşıp heyecanını yitirmesine sebep olabilir.",
+
+    //KADIN TERAZİ - ERKEK AKREP
+    "Terazi kadını Akrep erkeğini ya çok sever ya da ondan nefret eder. Sahiplenici ve kısıtlayacı tavırları olan Akrep erkeği çok şüphecidir ve bu durum Terazi kadınıyla olan ilişkisini olumsuz etkiler. Terazi kadını sürekli kontrol altında tutulmak istemez. İki taraf da cinsel açıdan oldukça arzulu ve tutkuludur. Terazi Akrep'in kendisine hükmetmesinden rahatsız olmayıp ipleri onun eline verirse ilişki uyumlu bir şekilde devam edebilir.",
+
+    //KADIN AKREP - ERKEK TERAZİ
+    "Bu iki tip doğal cazibelerinden dolayı birbirini fazlasıyla çeker. Akrep kadını tutkulu, duygusal, hareketli ve çekicidir. Terazi ise sevecen, dışa dönük, zarif ve duygusaldır. Akrep sahiplenici ve kısıtlayıcıdır. Kıskançlığı ile Terazi'yi çileden çıkarabilir. Terazi burcu yalnız bırakılmaya gelmez. Teselliyi başka kollarda arayacaktır. Bu da sevgilisine ders vermek isteyen akrep burcunun pek de hoşuna gitmeyecektir. Bu nedenle Akrep burcu eğer bir Terazi burcuyla birlikte olmak istiyorsa hayat tarzını biraz değiştirmesi gerekebilir. Yine de birbirlerini seviyorlarsa her şey mümkün.",
+
+    //KADIN TERAZİ - ERKEK YAY
+    "Terazi kadını oldukça duygusal ve romantiktir. Karşı cinse nasıl hitap etmesi gerektiğini iyi bilir. Yay erkeği ise güvenilir, dışa dönük ve neşelidir. İki burcun ilişkisi gayet uyumlu olabilir. Ancak Yay erkeğinin bağlanmaktan kaçan yapısı, ilişkide uzun vadede sorunlar çıkmasına neden olabilir. Seksüel açıdan iki taraf da romantiktir ve uyumlu bir ilişkileri olur.",
+
+    //KADIN YAY - ERKEK TERAZİ
+    "Bir Terazi erkeğine aşık olduysanız, kendinize çok uygun birini buldunuz demektir. Terazi erkekleri zarif, sevecen, duygusal ve romantiktir. Aşkta uyumlu ve sadık bir partner olurlar. Yay kadını ise güvenilir, neşeli ve dışa dönüktür. Bu iki tip birbirlerinden fazlasıyla etkilenir. Eğer birbirlerinin kişilik özelliklerine anlayış gösterirlerse birlikte uyumlu ve eğlenceli bir aşk yaşayabilirler.",
+
+    //KADIN TERAZİ - ERKEK OĞLAK
+    "Oğlak erkeği duygusal, düşünceli ve sabırldır. Aşık olduğunda gözü hiçbir şey görmez ve sevdiği kişiyi fazlasıyla sahiplenir. O, duygularını dile getiren ve hislerinden bahseden biri değildir. Çünkü bunu bir zayıflık göstergesi olarak kabul eder. Tüm bu özellikleriyle Oğlak erkekleri Terazi kadınlarına pek uygun değildir. Ancak seksüel anlamda birbirlerinin beklentilerini mükemmel şekilde tamamlarlar.",
+
+    //KADIN OĞLAK - ERKEK TERAZİ
+    "Bu iki burcun pek uyumlu bir ilişkisi olmaz. Terazi erkeğinin kararsızlığı Oğlak kadınını yorabilir. Düzeni seven Oğlak ise Terazi'nin hareketli ve değişimden hoşlanan yapısını yadırgayacaktır. Yine de tüm olumsuzluklara rağmen birbirlerine sonsuz güven verebilirler. Benzer faaliyetlerden hoşlanmaları da onları birbirlerine yaklaştırır. Biraz çaba ile uyumlu bir birliktelik yaşayabilirler.",
+
+    //KADIN KOVA - ERKEK TERAZİ
+    "Terazi ile Kova birlikteliği her zaman uyum içerisinde olur. Terazi erkeği yanında güvende ve huzurla kalabileceğiniz bir tiptir. Kova kadınının biraz çaba göstermesi gerekebilir. Terazi her zaman sürprizlerden hoşlanır. Bu yüzden iki burcun ilişkisinin sıkıcı ve durağan olması pek mümkün değildir. Ayrıca ikisinin de kıskanç olmaması özgürlüğüne düşkün bu iki burç için de şanstır. Akıllı bir Kova kadını Terazi erkeğini özgür bırakarak, sıkmayacaktır. İki burç birbirine güven duyuyorsa, uyumlu bir birliktelikleri olur.",
+
+    //KADIN TERAZİ - ERKEK KOVA
+    "Terazi kadını ve Kova erkeği arasında uyumlu bir ilişki olabilir. İkiniz de iletişimci olduğunuz için uzun sohbetleriniz, canlı tartışmalarınız olacaktır ve yeni fikirler ortaya çıkacaktır. Ancak Kova burcu erkeği, özgürlüğüne düşkün, yakın ilişkilerden kaçan bir kişidir. Siz ilişkinizin ciddileşmesini beklerken Kova'nın bu konudaki uzaklığı sizi çıldırtabilir. Seksüel yönden iki taraf da aktiftir. İstek ve arzularını kolayca birbirlerine ifade edebilirler.",
+
+    //KADIN TERAZİ - ERKEK BALIK
+    "Terazi kadını ve Balık erkeğinin ilişkisi pek de uyumlu olmaz. Balık'ın duygusallığı ve hayal aleminde yaşayan biri olması Terazi için pek cazip değildir. Terazi kadını daha cesur ve ayakları yere sağlam basan erkeklerle daha sağlam bir ilişki kurabilir. Seksüel yönden de Terazi'nin beklentileri karşısında Balık'ın duygusallığı ön plana çıkar. Bu yüzden bu iki burç arasında sorunsuz bir ilişki görmek pek mümkün değildir.",
+
+    //KADIN BALIK - ERKEK TERAZİ
+    "Balık ile Terazi zarif, kibar ve ince yapılı iki burçtur. Balık su elementinin Terazi ise hava elementinin etkisi altındadır. Hava ve su uyumu göz önünde alındığında uyumlu bir çifttir. Terazi burcu kültürel olayları yakından takip eder. Yeni açılan tüm mekanları takip eder. Bu anlamda Balık burcunu çok renkli ve heyecan dolu bir hayat bekliyor. Balık burcu maneviyata daha çok önem verdiği için sosyal rekabetlerin içerisine girmez. Balık ile Terazi yaşantı olarak farklı kutuplarda olsalar da düşünce ve hassaslık konusunda çok iyi anlaşan iki burçtur.",
+
+    //KADIN AKREP - ERKEK AKREP
+    "Akrep'ler arasında uyumlu bir ilişki olabilir. Bu iki tip arasında birçok ortak özellik olduğu gibi bir çok zıtlık da olabilir. Fakat birbirlerini çok iyi anlarlar. Her ikisi de tutkulu, duygusal, hareketli ve çekicidir. Hayatı dolu dolu yaşamaktan keyif alırlar. Kıskançlık ve sadakat bu ilişkinin temellerini oluşturur. Akrep burcu karşısındakinin sezgilerini ve içgüdülerini iyi bilir. Bu da karşısındaki Akrep burcunu anlamasını sağlar. Bu ilişkide taraflar konuşmadan sadece gözleriyle dahi anlaşabilir. Akrep burcu sevdiğine tam olarak bağlı olduğundan uzun ömürlü bir ilişki bu çiftin kaderi olacaktır.",
+
+    //KADIN AKREP - ERKEK YAY
+    "Akrep burcu bir bakışta karşısındakinin gözlerini okuyabilen, pratik zekalı ve kurnazdır. Yay burcu ise iyimser ve başkalarının kolayca etkisinde kalabilen bir burçtur. Yay burcu seyahat etmekten çok hoşlanır, buna karşılık akrep burcu da evde oturmaktan büyük keyif alır. Yay burcu acımasızca dürüsttür, akrep burcu ise su grubunda olduğundan duygusaldır. Yay burcu karşısındaki Akrep burcundan, sözlerini sakınmayacaktır. Onun bu yorumları da kimi zaman Akrep burcunu yıpratacaktır. Zıt kutupların birbirini çekmemesi halinde birlikteliği pek mümkün değildir.",
+
+    //KADIN YAY - ERKEK AKREP
+    "Akrep erkeği gizemli havası ve seksiliği ile sizi kendine çekecektir. Ancak onunla ciddi bir ilişkiye girmeden önce iki kez düşünün. Çünkü seks hayatınız yolunda gitse de iletişim anlamında ciddi problemler yaşayabilirsiniz. Akrep insanı sahiplenen, kıskanç ve hatta takıntılı bir yapıdadır. Siz ise özgürlüğünüze aşırı düşkün olduğunuzdan aranızda sık sık tartışma yaşanabilir.",
+
+    //KADIN AKREP - ERKEK OĞLAK
+    "Oğlak disiplinli ve düzenlidir. Bu durumda Akrep ile sorunsuz bir ilişkileri olacaktır. Lüksü ve iyi bir işi seven Oğlak burcu, Akrep burcu ile çok iyi anlaşacaktır. Her iki tip de sadıktır. Her iki taraf da arzulu ve tutkuludur, fakat Akrep burcu özelikle Oğlak burcunun bu tarafını ortaya çıkarması ve onu desteklemesi gerekir. Uzun vadede uyumlu ve güzel bir ilişki yakalamaları mümkündür. Akrep burcu ile Oğlak burcu tensel açıdan da oldukça uyumludur. Bakımına düşkün olan her iki taraf da birbiriyle bir uyum içerisinde olacaktır.",
+
+    //KADIN OĞLAK - ERKEK AKREP
+    "Bir Akrep erkeğinin yanına yaklaşmak Oğlak kadını için oldukça tehlikelidir. Akrep burcunda doğan bu adama cinsel organları hükmeder. İhtiraslı, heyecanlı ve hesaplanamazdır. Onunla yaşayabileceğiniz bir aşk tecrübesi, sizi ihtirasın doruklarına çıkaracaktır. Ancak duygusal olarak yıpranabilirsiniz. İlişkinizde her şeyden çok fiziki çekimin hakimin olmasına razıysanız, çok mutlu olabilirsiniz.",
+
+    //KADIN KOVA - ERKEK AKREP
+    "Akrep burcunun temsil ettiği dominant karakter, Kova burcunda fazlasıyla bulunduğundan bu ilişki zorlu bir ilişki olacaktır. Oldukça kıskanç ve talepkar bir burç olan Akrep burcu, özgürlüğüne düşkün Kova burcu ile pek uyumlu görünmemektedir. Bu beraberlik aşk hayatında iş hayatında göre daha olumlu sonuçlar getirebilir. Arkadaşlık ise ancak ortak ilgi ve bilgi düzeyin bağlı olacaktır. Kova'nın sosyal bir burç olması Akrep burcunu rahatsız etse de Kova burcuna doğru çekilmesine neden olacaktır.",
+
+    //KADIN AKREP - ERKEK KOVA
+    "Akrep burcu duygusaldır ve sezgileriyle hareket eder. Buna karşılık Kova duygusal değildir fazla bağlanmayı sevmez. Akrep burcu ise derin duygular yaşamayı, tutkuyu ve ilgilenilmeyi çok sever. Bu ilişkide tarafları birbirinden ayıran en önemli nokta burası olacaktır. Akrep burcunun duygusallığı daha ağır basar. Kova mantıklıdır. Duygularını fazla belli etmez. Dolayısıyla Akrep duygusal tatminsizlik yaşayabilir. Bu iki tipin uzun vadede uyumlu bir ilişki yakalaması zordur.",
+
+    //KADIN AKREP - ERKEK BALIK
+    "Her ikisi de su grubuna giren bu beraberlik oldukça güzel bir beraberlik olacaktır. İki tarafında ruh eşini bulmuş olması kuvvetle muhtemeldir. Akrep burcu birçok burç arasında Balık burcuna kendini çok yakın hissedecektir. Sezgileriyle hareket eden ve karşısındakinin içini gözlerinden okuyan Akrep burcu, Balık burcunun saf ve temiz iç dünyasıyla karşılaşınca çok mutlu olacaktır. Kıskanç Akrep burcunu, Balık burcu sabırla kendisine güvendirmek için uğraşacaktır. Seksüel açıdan duygusal, romantik ve arzuludurlar. Uzun vadede çok uyumlu ve mutlu bir ilişkileri olacaktır.",
+
+    //KADIN BALIK - ERKEK AKREP
+    "Akrep burcunun sadık ve tedbirli olması Balık burcunu cezp eder. Akrep erkeği yoğun duygulara sahiptir. Akrep erkeği yalnız kaldığı zaman mutlaka onunla iletişime geçilmelidir. Balık hassas duyguları ve gelişmiş önsezileri ile nerede ne yapması gerektiğini iyi bilir. Balık kadınının kendinden emin tavır sergilemesi Akrep erkeğinin hoşuna gider. Onu bu mücadelesinde sonuna kadar destekler. Balık burcu ile Akrep burcu arasındaki cinsel uyum da mükemmeldir. Balık insanı için seks gerçek aşkın en kutsal biçimde ifade edilmesidir. Balık burcunun bu görüşü Akrep'in oldukça hoşuna gider.",
+
+    //KADIN YAY - ERKEK YAY
+    "Yay'lar arasında pek uyumlu bir ilişki söz konusu olmaz. Bu iki insanın benzer özellikleri çok fazla olsa da iki taraf da haşarı birer çocuk mizacındadır. Sosyal yaşamdan ve arkadaşlarıyla vakit geçirmekten çok hoşlandıkları için ilişkiye odaklanamazlar. Bu iki kişi, iyi bir çiftten çok iyi birer dost olabilir. Şiddetli başlayan bir aşk, hareketli günlerle devam edip kısa süre içinde sona erebilir.",
+
+    //KADIN YAY - ERKEK OĞLAK
+    "Yay kadını ve Oğlak erkeği arasında pek uyumlu bir ilişki olmaz. Oğlak'ın iç disiplini ve kuralları arasında kendini kuşatılmış hisseden Yay, her an bu ilişkiden kaçmaya hazırdır. Oğlak erkeğinin tükenmek bilmeyen mantığından sıkılan Yay, kaprisli bir kişiye dönüşebilir. Ancak birbirlerini mutlu etmek için ellerinden geleni yapar ve aynı yönde hareket etmeyi başarırlarsa ömür boyu mutlu olabilirler.",
+
+    //KADIN OĞLAK - ERKEK YAY
+    "Yay erkeği neşeli, cazibeli ve manevi yönden zengindir. Size karşılaştığı en ilginç kadın olduğunuz duygusunu verir. O, aslında aşık olmak ister, ama bağlanmaktan çekinir, çünkü bağımsızlığına düşkündür. Onu gerçekten seviyorsanız, sabırlı ve anlayışlı olmalısınız. İlişkiniz ne kadar uzun sürerse birbirinize karşı olan duygularınız o kadar yoğun olacaktır. Her iki taraf da seksüel açıdan hareketlidir ve birbirlerini mutlu etmek için ellerinden geleni yaparlar.",
+
+    //KADIN KOVA - ERKEK YAY
+    "Yay burcu her konuda bilgisi olan, donanımlı, kültürel yönden diğer insanlardan üstün olan bir burçtur. Bu özelliğinin verdiği tutum ile çevrede anlaşılamayan bir karakter olarak görülür. Bu durum Kova burcunun dikkatini çeker. Kova burcu kadını Yay erkeğinden öğrenilecek çok şey olduğunu düşünür ve onu tanımak ister. Bu iki tip birbirlerinden kişilik özellikleri nedeniyle çok etkilenir ve çok iyi dost olurlar. Bu dostluk kısa sürede bir aşka dönüşebilir. Seksüel açıdan birbirlerine uyum gösterirler. Uzun vadede eğlenceli ve mükemmel bir ilişkileri olacaktır.",
+
+    //KADIN YAY - ERKEK KOVA
+    "Yay kadını güvenilir, neşeli, zeki ve dışa dönüktür. Bağlanmaktan korkar. Gezmek, eğlenmek ve hayattan zevk almak ister. Kova erkeği ise duygusal ama bir o kadar da değişken bir kişiliğe sahiptir. Birbirlerinin kişilik özelliklerinden etkilenen bu iki burcun insanı seksüel açıdan da birbirine uyum gösterir. Dolayısıyla uzun vadeli ve mükemmel bir ilişkileri olacaktır.",
+
+    //KADIN BALIK - ERKEK YAY
+    "Yay burcu açık sözlü, Balık burcu kırılgan olduğu için bu iki burcun uyumu çok zordur. Yay kimi zaman patavatsız olduğu ve ağzından çıkanı kulağı duymadığı için sık sık Balık burcunu kırabilir. Diğer yandan Balık burcunun hayata bakış şekli Yay'ı eğlendirebilir. Fakat tavırları uzun vadede Yay burcunu çileden çıkaracaktır. Bu iki tip arasında seksüel açıdan çok da uyumlu bir ilişki olmaz. Balık burcunun duygusal yönü ağır basacağından Yay kadar aktif olmayacaktır. Ancak Yay, Balık burcunun iç dünyasına girer ve onu anlamak için çaba sarf ederse ilişkileri devam edebilir.",
+
+    //KADIN YAY - ERKEK BALIK
+    "Özgürlük savunucusu Yay kadını ve duygusal Balık erkeği arasında pek uyumlu bir ilişki olmaz. Bu ilişki sürekli kendi dikenlerine takılacağı için zamanla kısır döngüye girecektir. Yay, bir Balık'ın gereksiz alıngan ve duygusal davranışlarına alışamaz. Üstelik onun kadar içsel düşleri olan biri değildir. Balık ne kadar kendine dönükse, Yay da o kadar çevresiyle barışıktır. Her şeyiyle zor bir ilişkidir ve devam edebilmesi için fazlasıyla çaba gerekir.",
+
+    //KADIN OĞLAK - ERKEK OĞLAK
+    "Yay erkeği neşeli, cazibeli ve manevi yönden zengindir. Size karşılaştığı en ilginç kadın olduğunuz duygusunu verir. O, aslında aşık olmak ister, ama bağlanmaktan çekinir, çünkü bağımsızlığına düşkündür. Onu gerçekten seviyorsanız, sabırlı ve anlayışlı olmalısınız. İlişkiniz ne kadar uzun sürerse birbirinize karşı olan duygularınız o kadar yoğun olacaktır. Her iki taraf da seksüel açıdan hareketlidir ve birbirlerini mutlu etmek için ellerinden geleni yaparlar.",
+
+    //KADIN OĞLAK - ERKEK KOVA
+    "Oğlak kadını ve Kova erkeği arasında pek uyumlu bir ilişki olmaz. Oğlak kadını duygusal ve sabırlıdır. Sevdiği kişiye her konuda destek olur. Kova erkeği isi değişken bir kişiliğe sahiptir. Sürekli farklı ortamlara girmekten ve yeni kişilerle tanışmaktan hoşlanır. Bu halleriyle Oğlak kadınına güven vermesi zaman alır. İki burç seksüel açıdan da birbirine uymaz.",
+
+    //KADIN KOVA - ERKEK OĞLAK
+    "Oğlak burcunun aradığı bağlılığı vermesi oldukça güç olan Kova burcu diğer burçlara nazaran özgürlüğüne oldukça düşkündür. Oğlak burcu ve Kova burcunun en büyük ortak noktaları ise her iki burcun da hırsları ve inatçılığıdır. İstemediği bir şeyi kimsenin yaptırması mümkün olmayan Oğlak burcunu, kararlılığı ile her şeyi başaracak Kova burcu dize getirecektir. Ancak yine de gelecekleri pek parlak değildir. Her iki tipin de ilişkiden ve hayattan beklentileri farklıdır. Kova burcu, Oğlak'a güven vermez. Seksüel açıdan da beklentileri pek birbirlerine uymaz.",
+
+    //KADIN OĞLAK - ERKEK BALIK
+    "Oğlak ve Balık aşkta mutlu olabilir mi? Kesinlikle evet! Oğlak kadını duygusal, düşünceli ve sevdiği kişiyi destekleyici bir yapıdadır. Bu özellikleriyle Balık erkeğini kolayca kendine aşık edebilir. Balık erkeği de romantizmi ve duygusallığıyla Oğlak'ın ayaklarını yerden kesebilir. İkisinin arasındaki ilişki kusursuz olacaktır ve yatakta da ilişkileri sorunsuz ilerleyecektir.",
+
+    //KADIN BALIK - ERKEK OĞLAK
+    "Balık duygusal, düşünceli ve sabırlıdır. Bir kez sevdi mi yapamayacağı fedakarlık yoktur. Her konuda sevdiği kişiye destek olur. Yalnız utangaç bir mizacı olduğu için kendini ifade etmekte zorluk çekebilir. Sevdiği kişiyi fazlasıyla sahiplenir ve kıskançtır. Tam bir güven insanıdır. Fakat Oğlak burcunu anlamak onun için zor olabilir. Çünkü Oğlak duygularını belli etmez ve incinmekten korkar. Oğlak burcunun hedefleri büyüktür. Balık burcu bu hedeflerin sevgilerinin önüne geçmesinden endişe duyar. Oğlak burcunun maddeci yapısı duygusal Balık burcunda korkular oluşmasına neden olur.",
+
+    //KADIN KOVA - ERKEK KOVA
+    "İki tarafın da kova burcu olması, şüphesiz ilişkiyi muhteşem kılacaktır. Zodyak'ın en zeki burcu sayılan Kova burcu, her iki tarafın birbirini her konuda anlayabilecek bir ikili ilişkinin varlığını ortaya koyar. Ancak yine de bağımsızlıklarına düşkünlükleri onların aradıkları güveni birbirlerinde bulamamalarına neden olabilir. Her ikisi de duygusal ve bir o kadar da değişken bir kişiliğe sahiptir. Sürekli bir değişim halindedirler. Seksüel açıdan arzulu olmalarına rağmen birbirlerinden çabuk sıkılmaları olasıdır. Uyumlu ve dengeli bir ilişki kurmak onları zorlayacaktır.",
+
+    //KADIN BALIK - ERKEK KOVA
+    "Kova burcu ilgisiz ve gizemli havası ile Balık burcunun canını fena halde sıkabilir. Kova erkeği sabit fikirli, inatçı bir kişiliğe sahiptir. Balık burcunun ise değişken bir yapısı vardır. İlişkinin yürümesi için Balık burcunun birçok taviz vermesi gerekir. Kova burcu sosyal olarak güçlü bir kişiliğe sahip gibi görünse de tekilde aslında zaafları olduğunu görürsünüz. Bu da Balık kadınını olumsuz etkileyebilir. Bütün zıtlıkları üzerinde barındıran Balık burcu ile Kova burcunun anlaşması oldukça zordur.",
+
+    //KADIN KOVA - ERKEK BALIK
+    "Balık burcunun romantik ve oldukça duygusal havası başlarda Kova burcunun ilgisini çekecek fakat her zaman olduğu gibi çabuk sıkılacaktır. Balık burcu ise Kova burcunun büyüsüne kapıldıktan sonra onun bu yüzünü gördüğünde kırılacaktır. Uyumlu bir ilişkiye ulaşmak için iki taraf için de fedakarlıklar gerekecektir. Eğer bir Kova burcu, Balık burcuna bağlanmışsa onu asla terk etmez, oldukça sadıktır; sevgisini daimi kılmaya çalışır. Balık burcu da ilişkisinde sadık ve bağlıdır. Alttan alınan her sorun için ilişkinin vadesi uzun olma yolunda ilerleyecektir.",
+
+    //KADIN BALIK - ERKEK BALIK
+    "Balık erkeği ile Balık kadınının uyumu mükemmeldir! İki burç da maddiyata önem vermediği için en büyük sıkıntıları maddiyattan yana olur. Balık burcu yalnızlığı sevdiği kadar birlikte hareket etmeyi de çok sever. Bu yüzden partilerde, açılışlarda, eğlencelerde bulunmak için can atarlar. Balık kadını ile Balık erkeğinin cinsel uyumu da tıpkı duygusal ilişkileri gibi mükemmeldir. İçgüdüleri kuvvetli olan Balık karşısındaki insanın ne istediğini bilir ve karşısındakini mutlu etmek için elinden gelen her şeyi yapar.",
   ];
 
   static const List<String> UYUM_DETAY = [
-//KADIN KOÇ - ERKEK KOÇ
+    //KADIN KOÇ - ERKEK KOÇ
     "Hayatınızda hız, yüksek tempo ve heyecan eksik olmasın diyorsanız bu ilişki size göre olabilir. Ancak aynı oranda yorucu ve enerji tüketici bir ilişki de olabilir. Zira ikiniz için de benlik duygusu ve kafanızın dikine gitmek önemlidir. Bu aşk ve ilişkiyi bir alev topuna benzetebiliriz. Yaşamınızda aksiyon ve enerji eksik olmaz. Kavganın, gürültünün son raddesinde olduğu bir ilişkiniz olabilir. Her iki tarafın dediğinde ısrar etmesi, birden bozup atması ilişkiyi aniden bitirebilir. İkinizin Mars ateşinin birbirinizden çok etrafınızı yakabileceğini göz ardı etmemelisiniz. Bunun dışında dağda karşılaşan iki keçi misali bir ilişkiniz olabilir.",
 
 //KADIN BOĞA - ERKEK KOÇ
@@ -694,6 +1092,9 @@ class BurcUyum {
     //KADIN YENGEÇ - ERKEK TERAZİ
     "Yüksek empati gücünüz, şefkat ve merhametiniz Terazi erkeğinin kendini uzak ve yabancı hissettiği özellikler olabilir. Mantığı ve aklıyla bunları anlamlandıramayan Terazi erkeğine ilk bakışta oldukça ters gelebilirsiniz, aranızda bir anlaşamama veya çatışma durumu söz konusu olabilir. Ancak huzur ve konfor noktasında size aradığı yumuşaklığı bulabilir ancak her ikiniz de öncü burçsunuz dolayısıyla onun da beklentileri olacaktır ve bu gemiyi kimin güdeceği bir anlaşmazlık konusu olabilir. Aranızdaki ilişki zamanla rayına oturacaktır, zira kalpleriniz birbirinizi anladıkça çatışmaların bertaraf edilebileceğini görebilirsiniz. Sessiz, ağırbaşlı, anlayışlı ve hassas özellikleriniz Terazi erkeği tarafından er ya da geç fark edilir ve bu kadın aklı ve mantığıyla aranızdaki mükemmel uyumun sırrını çözebilir.",
 
+    //KADIN TERAZİ - ERKEK YENGEÇ
+    "Yengeç erkeği sizin için pek de anlaşılması kolay biri değildir. Her şeyden önce çok ketumdur, sessizdir, ne hissettiğini, ne düşündüğünü anlayamazsınız. Sağ gösterirken sol vurabilir, beni sevmiyor diye düşünürken aslında sizi çok seviyordur. Aşırı korumacı, şefkatli, üzerinize düşen yönleriyle evinin kralı olabilir. Ancak hassas ve duygusal yönleri, zaman zaman duygu sömürüsüne varan talep ve istekleri sizi yorabilir. Sizden beklediği evcimenliği, duygusallığı, romantizmi, şefkat ve anlayışı ona her daim sunabilmeniz zordur. Görünürde uyumlu bir çift gibi görünseniz de içten içe pek çok çatışma söz konusu olabilir.",
+
     //KADIN AKREP - ERKEK YENGEÇ
     "Su grubu burçların uyumu tartışılmaz bir gerçek. Dolayısıyla Yengeç sevgiliniz sizin duygularınızdan da duygusal ihtiyaç ve beklentilerinizden de çok iyi anlayacaktır. Üstelik çalışkan ve verici olan bu erkek yuvanızda paranın hiç eksik olmamasına ve maddi ihtiyaçlarınızın da karşılanmasına destek olacaktır. İki Güzel ve duygusal yönden besleyici bir ilişki olabilir. Yengeç’in şefkatli kolları arasında yumuşaklığı, huzuru, sevgiyi bulabilirsiniz. Çok kurcalayıcı, kurgulayıcı, şüpheci davranmamaya, Akrep’in yanan ateşini zaman zaman kendi içinizde sönümlendirmeye dikkat etmelisiniz. Yengeç’in suları fazla geldiğinde de yani kıskaçlarını çok fazla sıktığında sözgelimi, boğulmamaya dikkat etmelisiniz.",
 
@@ -726,5 +1127,195 @@ class BurcUyum {
 
     //KADIN ASLAN - ERKEK ASLAN
     "Karşınızda egoları en az sizin kadar güçlü, ayakları yere sizin gibi sağlam basan ne istediğini, ne beklediğini bilen bir kişi daha var. Aslan erkeğini bu yönlerden anlamanız hiç de zor değildir. Onu yücelttiğiniz, pohpohladığınız ve çokça şımarttığınız sürece bu ilişkide çok da zorlanmayabilirsiniz. Ama aynı şeyleri siz de bekliyorsunuz. Bu ilişkide gurur ön plandadır. Her şeyi yapabilirsiniz ancak bir Aslan’ın kadın veya erkek gururuyla asla oynamamalısınız. Her ikinizde kendinizin dışında birbirinizi görebildiğiniz ve hayatınızın merkezine ortak yaptığınız her şeyde sevgiyi, tutkuyu ve naifliği koruyabildiğiniz sürece mutlu bir beraberlik sürdürebilirsiniz.",
+
+    //KADIN BAŞAK - ERKEK ASLAN
+    "Aslan erkeğinin çok da fazla emek ortaya koymaya gerek duymadan sergilediği özgüven, gösteriş ve abartılı hareketler, sizin gibi fonksiyonelliğe, işlevsel amaçlara, faydaya değer veren çalışkan Başak kadınına oldukça abartılı, gereksiz veya anlamsız gelebilir. Bu yönden birbirini anlamakta zorlanabilen bir çift olabilirsiniz. Aslan’ın hayatın her yönünden zevk alıyor olması, abartılı zaman zaman teatral ve dramatik yönleri, vur patlasın çal oynasın eğlenceden hoşlanan tarafı size oldukça fazla gelebilir. Siz hayattaki küçük şeylerden, detaylardan, titizlikten, evcil hayvanlarınızla küçük mutluluklardan hoşlanırken bunca gürültü patırtı çok fazla gelebilir, zor bir ilişki olabilir.",
+
+    //KADIN ASLAN - ERKEK BAŞAK
+    "Başak erkeğinin detaycı, kılı kırk yaran özellikleri sizin pek de aldırmadığınız hatta görmediğiniz ve göz ardı ettiğiniz küçük ayrıntılardır sadece. Sizin için bundan çok daha mühim şeyler vardır, aşk sözgelimi sizin için her türlü detayın önündedir ve mükemmel bir aşk için detaylara takılmamak gereklidir. Başak erkeğinin çalışkanlığı ve sizin zevklerinizi karşılayacak girişimlerde bulunması hoşunuza gidebilir. Aşk dolu tutkulu, sanatsal ve yaratıcı kişiliğiniz onun her şeyi akıl ve zekâyla çözmeye çalışan zaman zaman mekanikleşebilen kafa yapısını sıkıcı bulabilir. Başak erkeğini zaman zaman anlamakta zorlanabilir, uğraştığı ya da kafasını taktığı şeyleri gereksiz, anlamsız bulabilirsiniz. Ancak bu kişinim hayatınızı oldukça kolaylaştırabileceğini de unutmayın.",
+
+    //KADIN ASLAN - ERKEK TERAZİ
+    "Terazi erkeğinin zarafeti ve kibarlığı karşısında etkilenmemeniz mümkün değil. Zira o da sizin gibi ancak sizin kadar coşkulu olmasa da sanata ve yaratıcılığa oldukça meraklıdır. Terazi erkeğinin aklı ve rasyonelliği karşısında sizin coşkularınız vardır. Diplomasi yeteneğiyle, sakinliği ve nezaketiyle sizin heyecanlı, naif yönlerinizi yönetebilir. Birbirini çokça tamamlayan renkli bir ilişki yaratabilirsiniz. Ortak sanatsal ve estetik zevkleriniz olabilir. Birlikte müzelere, sergilere gidebilir, sinemadan, tiyatrodan bolca konuşabilirsiniz. Terazi’nin zarafeti ve kibarlığı ruhunuzu okşarken bunu dile getirmesi ilişkinizi canlı tutacaktır, tek yapması gereken sizi pohpohlamayı ihmal etmemek veya unutmamak, zira kafasında çok şey olan Terazi dalgın olabilir.",
+
+    //KADIN TERAZİ - ERKEK ASLAN
+    "Aslan erkeğinin gösterişi, kendine güveni, cesareti, yürekliliği Terazi kadını için oldukça caziptir. Zira yüksek estetik yönlerinizle, bu canlı, yaratıcı, gösterişli erkek kalbinizi fethedebilir. Tek zorluk bu erkeğin sürekli pohpohlanmaya ve yüceltilmeye olan ihtiyacıdır. Keza siz de sürekli beğenilmek, takdir görmek istersiniz. Aslan’ın özgüvenli ve kendine değer veren tavrı bir Terazi’yi cezbeder. Üstelik size ihtiyaç duyduğunuz ateşi, alevi ve heyecanı getirecektir. İkiniz için de aşk önemlidir, ancak Aslan tutku ve arzuları öne çıkarken siz ilişkinin daha çok akıl ve mantık tarafında olabilirsiniz.",
+
+    //KADIN AKREP - ERKEK ASLAN
+    "Aslan neşesi, kahkahası, eğlenceli yönleriyle hayatınıza renk ve canlılık katar. Bu ilişkinin olumsuz tarafı her ikinizin de değişik tarzda inadı olabilir. Aranızdaki çatışmaları kilit noktasına vardırmadan çözmeye çalışmalısınız. Derin tespitlerinizi ortaya koyan sivri dilinizle Aslan’ın gururunu kırmamaya çalışmalısınız. Zira egoları güçlü Aslan burcu erkeği sabit fikirli olması ve tutunduğu ve azmettiği konuda hırsı ve inadıyla da bilinir. İnatlaşmamaya çalışmak, onun kafasını taktığı konuda ilerlemesine destek olmak bu ilişkiyi besleyecektir, aksi halde çatışmalar söz konusu olabilir.",
+
+    //KADIN ASLAN - ERKEK AKREP
+    "Akrep erkeğinin gizemi, etkileyici tavrı ve görüntüsü dikkatinizi cezbedecektir. Bu kapalı kutuyu çözmek sizde büyük bir merak ve ilgi uyandırabilir. Akrep erkeği size hayatın o güne kadar farkına varamadığınız derin anlamlarını gösterebilir. İkinizin de dediğim dedik inatçı yapısı ilişkiyi zorlaştırabilir. Psikolojik boyutu yüksek, asla yüzeysellikle yetinmeyen, her şeyi anlamlandırabilen, yargılarında da şaşırtıcı şekilde haklı çıkabilen Akrep insanı hayatınıza müthiş bir farkındalık katabilir. O da şüphesiz sizin enerjinize, yaratıcılığınıza, tutkularınıza karşılıksız kalamayacaktır. Ancak huzursuz ve sürekli mücadele, savaş ve dönüşüm peşindeki tavrı rahatsız edici olabilir.",
+
+    //KADIN ASLAN - ERKEK YAY
+    "Yay burcu erkeğinin enerjisi ve hareketi ile sizin coşku ve heyecanınız birbirini tamamlayan bir ateş çemberi yaratabilir. Yay erkeği hayatınıza bol sosyallik, paylaşım ve hareket getirirken o da sizin gücünüzden, sağlam ve kararlı duruşunuzdan, alçakgönüllüğünüz ve bonkörlüğünüzden etkilenecektir. İkinizin de eğlenceden, yeme, içmeden zevk alan yönleriniz aranızda güzel bir sinerji oluşmasını sağlayabilir. Enerjisi yüksek uyumlu bir ilişki yakalayabilirsiniz. Birlikte yapacağınız yolculuklar bu ilişkiyi besleyen etken olacaktır. Bir Yay ile birlikteyseniz biraz macerayı göze alıp tahtınızı zaman zaman da olsa bırakmayı düşünmelisiniz.",
+
+    //KADIN YAY - ERKEK ASLAN
+    "Neşeniz, iyimserliğiniz ve hareketli yapınızla istikrar ve sabitlikten hoşlanan ve tahtını kolay kolay terk etmeyen Aslan burcu erkeğini yerinden oynatabilirsiniz. Onun eğlence algısını, yeme içmeye yönelik zevklerini beslemeniz yeterli olabilir. Birlikte harika seyahatler yapabilirsiniz. Aslan’ın neşeli, canlı, hayattan zevk alan yönleri sizin iyimser, her fırsata ve imkana açık kâşif ruhunuz ve gezgin yönlerinizle birleştiğinde mükemmel bir uyum yakalayabilirsiniz. Tek zorlayıcı olan Aslan kadınının sabit fikirli taraflarıdır, inatlaşmadan dikkatini farklı yönlere çekebilirsiniz ve aslında bu yönü bulmanız da çok zor değildir, kalbine odaklanın, onun büyük bir çocuk olduğunu, ruhundaki naifliği unutmayın.",
+
+    //KADIN OĞLAK - ERKEK ASLAN
+    "Kendini övmeyi seven, kendini beğenen ve takdir edilmekten ve alkış tutulmaktan hoşlanan Aslan erkeği bu özellikleriyle sizi zaman zaman krize bile sokabilir. Zira bu durum sizin kuralcı, disiplinli, ciddi yapınıza tek kelimeyle yakışıksız gelebilir. Aslan burcunun gösterişli yönleri, eğlence, şan, nam, şöhret uğruna para pula önem vermeden harcaması, abartılı alışverişler yapması, sizin disiplinli, kuralcı yönleriniz tarafından pek de hoş karşılanmaz. Egoları ve özgüveni yüksek Aslan burcu kadınını sınırlamanız ve idare etmeniz pek de kolay değildir. Zor bir ilişkidir.",
+
+    //KADIN ASLAN - ERKEK OĞLAK
+    "Karşınızda dirayeti, kararlılığı, planlı, stratejik yaklaşımlarıyla ciddi bir Oğlak erkeği duruyor. Bu dirayet ve kararlılık karşısında kendi enerjinizin giderek sönükleştiğini fark etmek pek de hoşunuza gitmeyebilir. Zira canlılık, gösteriş ve eğlenceden haz duyan yapınız Oğlak erkeğinin planlarına pek de uymayabilir. Oğlak kadınının hayat planının eninde sonunda bir parçası haline geliyor olmak içinizdeki neşeyi söndürdükçe ve yaratıcılığınızdan size ödün verdikçe hayal kırıklığına uğrayabilirsiniz. Zira sizin için dibine kadar tutkuyla yaşanması gereken aşk bile Oğlak burcunun plan ve istikrar çerçevesinde yaklaştığı, kontrolü elden bırakmadığı, ciddi olunması gereken bir konudur. Zor bir ilişki olabilir.",
+
+    //KADIN ASLAN - ERKEK KOVA
+    "Kova erkeğinin yenilikçi ve orijinal yaklaşımları, coşkulu ve sanatsal yönlerinizi tetikleyecektir. Onun arkadaşları ve içinde bulunduğu toplumun iyiliği ve refahı için kendinden, kişisel beklentilerinden vazgeçişi tarafınızdan şaşkınlıkla karşılanabilir. Sizin için kendini gösterme, tüm varlığınızla ve duruşunuzla 'ben' olabilme önemlidir. Birbirinizi görmediğiniz, farkında bile olmadığınız eksik yönlerinizle tamamlayıcı bir ilişki oluşturabilirsiniz, ancak ortak noktalarınızı yakalamaya gayret etmelisiniz.",
+
+    //KADIN KOVA - ERKEK ASLAN
+    "Aslan erkeğiyle aslında kendinizi tamamlanmış hissedebilirsiniz, her ne kadar bu görünürde zor gibi olsa da. Ancak aranızdaki çekim ve elektrik sizi birbirinize yaklaştıracaktır. Zıt kutupların birbirini çekmesi misali yakınlaşabilir, ani bir hareketle de uzaklaşabiirsiniz. Çekim gücü yüksek manyetik bir ilişki yaşayabilirsiniz. Aslan erkeğinin özgüveni, kendine inancı inanılmazdır. Her zaman görülmek, sevilmek, takdir edilmek ve tüm dikkatleri üzerinde toplamak ister. Dikkatinizi ona odaklamadığınız an ise problemlerin çıkmaya başladığı andır.",
+
+    //KADIN BALIK - ERKEK ASLAN
+    "Aslan erkeğinin sabit fikirleri, egoları, güçlü kişiliği aşılacak gibi değildir. Sizin sanatçı yönleriniz ve yaratıcılığınız onu etkileyecektir. Ama zamanla hassasiyetiniz, merhametiniz ve duygusallığınız sizi farkında bile olmadan ve istemeden ezmesine neden olabilir. Ortaya çıkan bu durum pek hoşunuza gitmeyebilir. İdare etmesi zor bir ilişki olabilir. Zira Aslan erkeği karşısında oldukça pasif kalabilirsiniz. Ancak onun yaratıcılığı, gösteriş ve eğlenceden hoşlanan taraflarını çekici bulmamanız mümkün değil. Kendinizi ezdirmemeye çalışmalı, onun göremediği zamanlarda bunu ona hatırlatmalısınız. Zira tahtında ve asası elindeyken etrafını görmesi, hissetmesi güç bir burç olabilir Aslan burcu ve özellikle de Aslan erkeği.",
+
+    //KADIN ASLAN - ERKEK BALIK
+    "Balık erkeğinin uyumlu, esnek, her ortama ve kişiye uyumlanabilen yapısı sizin güçlü yapınız karşısında size zayıf gibi görünebilir. Gücünüz, egonuz, istek ve beklentilerinizle kısa sürede bu ilişkide öne çıkan taraf olabilirsiniz. Bu durum onun da daha pasif kalmasına neden olarak sizden uzaklaşmasıyla sonuçlanabilir. Aslan burcunun hassas sanatçı duyarlılığı, fedakâr ve cefakâr yapısı göz ardı edilebilecek özellikler değildir, egonuzun başınızı döndürmesine izin vermemelisiniz, zira onun aşırı uyumlu yapısı buna meyletmenize ortam hazırlayacaktır.",
+
+    //KADIN BAŞAK - ERKEK BAŞAK
+    "Çalışkan, titiz ve sebatkar iki Başak olarak süper verimli bir ilişkiniz olabilir. Birçok işin üstesinden gelebilir, hayatınızı mükemmel şekilde pratik hale getirebilirsiniz. Sizin göremediğiniz detayları o görecek, onun göremediklerini ise siz yakalayabileceksiniz. Ancak aşırı mükemmeliyetçi bir çift olabilirsiniz. Karşılıklı kaygı, evhamlarla, uzayan eleştirilerle birbirinizi daraltabilirsiniz. Sürekli hastalıklardan, ilaçlardan, şifadan konuşabilir, bunlarla ilgili uğraşlar edinebilirsiniz. Çalışarak ve mükemmeliyetçi şekilde ortak pek çok maddi getiri, gelir edinebilirsiniz. Ancak zaman içinde farklı şeyler aradığınızda, bu ilişki size oldukça durağan ve monoton gelebilir. İlişkinin monotonlaşmasını önleyecek tedbirleri almayı ihmal etmemelisiniz.",
+
+    //KADIN TERAZİ - ERKEK BAŞAK
+    "Detaylara önem veren Başak erkeği titizliği, eleştirel ve mükemmeliyetçi yaklaşımı, kaygıları, endişeleriyle konfor alanınızı bir miktar dağıtabilir. Ancak çalışkanlığı ve becerikliliği her anlamda hoşunuza gidecektir, zira sizi topraklayacak, bir nevi ayaklarınızın yere basmasını sağlayacaktır. Başak burcu hayatınızı her şeyi düşünülmüş mükemmel bir hayata dönüştürebilir. Ancak bu kadar mükemmellik ve titizlik nereye kadar hoşunuza gidebilir, bunu düşünmelisiniz. Başak’ın diken üstünde duruşu, eleştirel yaklaşımı, güzelliklerden, keyif ve konfordan hoşlanan siz Terazi kadını için zaman içinde rahatsız edici olabilir. Onun bunca emeğine ve çalışkanlığına da anlam veremeyebilirsiniz. Kolay bir ilişki olmayabilir.",
+
+    //KADIN BAŞAK - ERKEK TERAZİ
+    "Çalışkanlığınız, aklınız ve zekânızla verime, mükemmeliyete, kusursuzluğa inanan yapınız karşısında Terazi erkeğinin keyfi yaklaşımları, rahatlığı size batabilir. Üstelik siz her ne kadar kontrolcü ve detaylara önem veren yapıda olun farkına bile varmadan kendinizi Terazi’nin lider kanatları altında sürükleniyorken bulabilirsiniz. Sakin ve uyumlu kişiliğiyle hiç göstermese de Terazi erkeği ilişkileri yönetmekte ustadır, zekânız ve kıvraklığınız bu ustalık karşısında etkisiz kalabilir. Birbirini göremeyen ya da anlayamayan bir ilişkiniz olabilir.",
+
+    //KADIN AKREP - ERKEK BAŞAK
+    "Titiz, kuruntulu, mükemmeliyetçi tarzıyla Başak erkeği hayatınızda özellikle sizin pek de önem vermediğiniz detayları görür, önemli tüm küçük işleri halleder ve aslında hayatınızı kolaylaştırır. Ancak bir süre sonra aşırı titizliği ve vesvesesi size fena halde batmaya başlayabilir. Aradığınız duygusal derinlik ve tutkuyu da onda bulmanız zordur. Daha çok pratikliğe, beceriye odaklıdır. Kolay bir ilişki değildir. Zira sizin zaman zaman paranoya benzeri bir hal alan merak ve şüphe duygunuz Başak erkeğinin pimpirikli yapısıyla birleştiğinde bu ilişki zor hale gelebilir. Herkes kendi halinde olduğunda ve kendi işine baktığında birbirinize rahatsızlık vermeyebilirsiniz.",
+
+    //KADIN BAŞAK - ERKEK AKREP
+    "Sizi telaşeniz, aşırı zeki, kıvrak yapınız, kusursuzluk beklentiniz sürekli yorup huzursuz ederken, Akrep erkeğini sürekli kendini ve etrafını dönüştürme, değiştirme arzusu huzursuz etmektedir. Dolayısıyla tarafların karşılıklı şekilde huzursuz olduğu bu ilişkiden beklentiniz çok da yüksek olmamalı. Kişisel beklentileriniz ve arayışlarınızla birbirinizi bıktırmamaya çalışmalısınız. Aslında her ikinizin de yapıcı, etkili bir düzen beklentisi içinde kusursuzluk arayışınız birbirinizi anlayabildiğiniz ölçüde bu ilişkiyi farklı boyutlara çekebilir, zor ama ilginç bir ilişkiniz olabilir. Ortak ilgi ve mükemmel hedefler noktasında buluşabilirsiniz. Aslında kendiniz için değil de etrafınızdakiler açısından anlaşılması ve idare edilmesi zor bir birlikteliğiniz olabilir.",
+
+    //KADIN BAŞAK - ERKEK YAY
+    "İkinizin de değişken ruhlu, esnek yapıda ve yüksek adaptasyon güçlü olmanız bu ilişkinin en önemli tetikleyicilerinden biridir. Karşınızda eğlenmeyi, sosyal paylaşımları seven, fikirlere, düşüncelere, ideallere değer veren bir Yay erkeği var. Aşırı detaylar, hesap kitap ve kaygılarınızla onu sıkmamaya çalıştığınız sürece bu engin enerji, sınırsız iyimserlik size oldukça iyi gelebilir, gönlünüzü ferahlatabilir. Zekânız, kıvraklığınız ve becerikliliğinizle bu ilişkiyi yönetmeniz zor değil aslında, tek yapmanız Yay erkeğini kısıtlamaya çalışmamak ve onun macera ve keşif dolu ruhuna eşdeğer duygular geliştirmek olabilir.",
+
+    //KADIN YAY - ERKEK BAŞAK
+    "Başak erkeğinin çalışkanlığı, üretkenliği, titizlik gerektiren hesap işlerinde başarısı, düzen ve tertip tutkusu zaman zaman size zor gelse de hayatınızda çatışmalara neden olsa da bu erkeğin hayatınızı oldukça kolaylaştırabileceğini unutmayın. Ancak zaman zaman detaylara saplanıp kalması, hemen her şeyde kusursuzluk ve mükemmellik arayışı sizi oldukça zorlayabilir. Ancak ilk bakışta inceliği, zarafeti, saflığı ve çalışkanlığıyla sizi büyüleyecektir. Üstelik pek çok erkeğin aksine Başak erkeği oldukça konuşkan olabilir. Konuşmayı da seviyorsanız onunla sohbet edebilir, hemen her konuda size faydası olabilecek bilgiler edinebilirsiniz. Ancak sizin uçsuz bucaksız keşif ve macera duygunuz karşısında Başak erkeği biraz daha sınırlı kalabilir ve bu noktada ilişkinin zorlukları başlayabilir.",
+
+    //KADIN OĞLAK - ERKEK BAŞAK
+    "Başak erkeğinin katıksız, temiz, titiz, detaycı yönleri yaptığınız büyük planları tamamlayıcı ve destekleyici niteliktedir. Becerikli Başak erkeği tam anlamıyla hayatınızı kolaylaştırır, zekâsıyla sizi tamamlar. Sizin uğraşmak istemediğiniz pek çok ıvır zıvırla ve detayla üşenmeden ve yorulmadan uğraşan Başak erkeği planlarınızı gerçekleştirmede size sonsuz destek olabilir. Birlikte hedeflerinize ulaşabileceğiniz sağlam bir ilişkiniz olur. Birbirinizi iyi topraklayan enerjinizle uyumlu bir beraberliğiniz olabilir.",
+
+    //KADIN BAŞAK - ERKEK OĞLAK
+    "Oğlak erkeğinin yapıcılığı, somutlaştırma gücü ve sabrı tartışılmazdır. Bu sabırla birleşen çalışkanlığınız onun planlarını takip ettiğiniz sürece mükemmel uyumda bir ilişkiyi yakalamanız hiç zor olmayabilir. Birlikte çok şey üretebilen, verimli, uzun vadede kalıcı, güvenilir bir ilişki teşkil edebilirsiniz. Zekânızı, becerikliliğinizi onun azmi ve hırsıyla birleştirebilir, ilişkinizdeki zorlukları kolayca giderip ilişkinizi becerikliliğinizle yönetebilirsiniz. Uyumlu bir ilişki olabilir ancak Oğlak burcunun mesafeli tutumunu ve uzun vadeli disiplinini göz ardı etmemelisiniz.",
+
+    //KADIN BAŞAK - ERKEK KOVA
+    "Birbirinizi çok fazla anlayıp göremeyebilirsiniz. Her ikinizinde kendi çapında işleri, güçleri ve meşgaleleri olabilir. Kova erkeği sosyal çevresiyle oldukça meşguldur. Sizin için ise tamamlanması gereken işleriniz, günlük yaşantınız, evcil hayvanlarınız, sağlığınız ve sıhhatiniz oldukça önemlidir. Birbirinizin farklı yönlerini görebildiğiniz ölçüde bir beraberlik kurabilirsiniz. Kova erkeğinin orijinallik dürtüsüyle çok sıra dışı bir ilişkiniz de olabilir. Ancak fazla özgür, yenilikçi tavırları sizin için ters ve yorucu olabilir. Hesaplayıp öngörebileceğinizden çok daha farklı, sıra dışı ve marjinal düşünebilir.",
+
+    //KADIN KOVA - ERKEK BAŞAK
+    "Başak erkeğinin en ufak detaylara bile odaklanabilmesi, ince ayrıntıları yakalaması size inanılmaz gelebilir. Vizyoner, modern ve yenilikçi dünyanızda gözünüzden kaçan her ne varsa görebilir ve size gösterebilir. Hassasiyeti ve inceliği ise tartışılmazdır. Ancak bir süre sonra narin, hastalıklara meyilli yapısı, titiz ve kuruntulu yönleri size anlamsız gelmeye ve batmaya başlayabilir. Eleştirel, mükemmeliyetçi yönleri kılı kırk yardıran titizliği zihinsel açıdan sizi oldukça yorabilir, psikolojik bir krize dahi sokabilir. Başak erkeğinin bir dikiş makinesi gibi tekdüze fakat kusursuz işleyen zihni ve bunun yarattığı gürültü özgürlükçü, yenilikçi bünyenize çok fazla gelebilir. Kolay bir ilişki değildir.",
+
+    //KADIN BALIK - ERKEK BAŞAK
+    "Sizin sonsuz ve sınırsız fedakârlığınız, Başak erkeğinin üretkenliği ve çalışkanlığıyla birleştiğinde müthiş bir ikili olabilirsiniz. Karşılıklı hizmet ve maddi ve manevi alışveriş çerçevesinde sizi buluşturabilecek bir ilişkidir. Ancak aranızdaki alışveriş dengesini iyi gözetmelisiniz. Sizin sezgileriniz, Başak burcunun zekâsı güzel bir alışveriş olabilir. O sizin dünyanıza sınırlar, siz onunkine engin bir dünya görüşü katabilirsiniz. Başak erkeğinin ayakları yere basan, pragmatik, yapıcı, becerikli çalışkanlığını sizin manevi zenginliğiniz, farklı bakış açılarınız tamamlayacaktır. Bu ilişki dengesini iyi kavrayıp yönettiğinizde çok güzel bir beraberliğiniz olabilir.",
+
+    //KADIN BAŞAK - ERKEK BALIK
+    "Titizliğinizi, çalışkanlığınızı, kusursuzluk dürtünüzü anlamakta zorlanmayacaktır Balık erkeği. Üstelik bu özveri karşısında o da kendini tamamen size adayabilir ve feda edebilir. Değişken yapılarınız bu ilişkiyi kolaylaştırırken, siz detaycılık ve mükemmeliyetçiliğin zirvesinde, Balık erkeği ise her şeyi bırakabilmenin, akışa kapılabilmenin büyüsünde olabilir. Maddi ve manevi anlamda karşılıklı alışverişe dayalı, alma ve verme dengesi üzerine oturan bir ilişkiniz olabilir. Balık erkeği sizin kendinizde eksik gördüğünüz akışına bırakabilme, vazgeçebilme ve kontrolü bırakma gibi hayatın manevi ve mistik boyutları yüksek yönlerini size gösterebilir. Siz de onun dağınık, kaotik hayatını toparlayan güvenilir güç olabilirsiniz. Dengeli ve uyumlu bir birlikteliğiniz olabilir",
+
+    //KADIN TERAZİ - ERKEK TERAZİ
+    "Terazi ile pek çok ortak özelliğiniz bulunabilir. Birbirinizle saatlerce konuşabilir, karşılıklı dertlerinizi, sorunlarınızı çok iyi anlayabilirsiniz. Ancak karşılıklı incelikler, fazla nezaket, kibarlık ve diplomasi yüzünden kayıp bir ilişki olabilir, zira ikiniz de aynı durumda çok benzer şekilde düşünüp hareket edebilirsiniz, birbirinizi çok iyi anlasanız da yüzleşmekte zorlanabilirsiniz. Terazi erkeği de tıpkı sizin gibi beğenilmek, takdir görmek ister. Yine aynı sizin gibi keyiften, kişisel zevklerden, lüksten yanadır. Bu kadar aynılık olunca birbirinizin keşfedecek yanınız kalmaması size sıkıcı gelebilir.",
+
+    //KADIN TERAZİ - ERKEK AKREP
+    "Siz bir Venüs kadını, karşınızdaki de bir Mars erkeğidir. Kışkırtıcı bir ilişki olabilir. Siz Akrep erkeğini fazla derin, mücadeleci bulabilirsiniz. O da sizin fazla rahat olduğunuzu düşünebilir. Ancak çalışkanlığı ve özverisiyle konfor alanınızı genişletecektir ama bunu yaparken sizi sinir edebileceğini hatırlatalım. Keza Akrep burcunun aşırı merakından, sürekli gizeminde, bir detektif gibi sorgulayıcı ve irdeleyici olmasından da rahatsızlık duyabilirsiniz. Derin duygusallığı, her şeyi görüp anlayabilen tarafları, şüpheciliği, kıskançlığı üzerinizde duygusal baskı yaratabilir. Eninde sonunda Akrep her şeyi bilmek, bilmese de öğrenmek zorunda hissedecektir kendini. Aşkta tehlikeli olabilir, zira aklına koyduğunu yapma, yaptırma, elde etme konusunda 'ya benimsin ya kara toprağın' diyebilecek kadar korkusuz ve cesurdur.",
+
+    //KADIN AKREP - ERKEK TERAZİ
+    "Akrep kadını olarak müthiş sezgi ve duygularıyla hemen her konuyu sorgulabilecek güçtesiniz ve bu zaman zaman hem kendinizle hem de çevrenizle mücadele içinde olmanıza neden olabilir. Terazi’nin zarafeti ve kibarlığından etkilenmeyecek kadın ise yok gibidir. En önemli silahı ise sakin ama etkili tarzıdır. İnanılmaz diplomatik ve politik davranabilir, nabza göre şerbet vermekte ustadır, yumuşak görüntüsü ardında öncü ve lider bir karaktere sahiptir. Onunla birlikte olmak istiyorsanız değiştirmeye asla çalışmamalı, kendi halinde ve özgür bırakmalısınız. Zira bu nezaket ve kibarlığının ardında dominant bir yapısı vardır, detayları hiç ummadığınız bir şekilde yakalayabilir, çok şeyi zaten bildiğinizi zannederken sizi şaşırtabilir. Gerçekten sürprizli bir ilişki olabilir.",
+
+    //KADIN TERAZİ - ERKEK YAY
+    "Uyumlu ve zengin bir ilişkiniz olabilir. Yay erkeği gezip tozmaya, seyahat etmeye, değişik kültürler, insanlar tanıyıp ufkunu ve vizyonunu geliştirmeye bayılır. Bu sayede çok şey bilir, öğrenir ve paylaşır. Onunla hemen her şeyden konuşabilir, seyahat edebilir, zengin bir sosyal çevre edinebilirsiniz. Ancak onunlayken harekete, seyahate ve spora yatkın olmalısınız. Venüsyen karakterinizi hareket, aktivite yönünde biraz zorlamanız da gerekebilir. Aksi halde onu elinizde tutmanız zor olabilir. Fırsatını bulunca kaçmaya hazır bir ok gibidir. Siz yumuşak ve romantik hayaller kurarken, o avuçlarınızdan çoktan uçup gidebilir.",
+
+    //KADIN YAY - ERKEK TERAZİ
+    "İyimser, olumlu, şanslı bir ilişkidir. Terazi’nin bilgisi, entelektüelliği, zekâsı, akılcılığı, insiyatif sahibi oluşu ilişkiyi destekleyen önemli faktörlerdir. Üstelik duruşuyla, kibarlığı ve zarafetiyle tam bir salon adamı olabilir. Keyiften ve lüksten hoşlanan bu erkeği, fikirleriniz ve özgür yönlerinizle oldukça etkileyebilirsiniz. Terazi erkeğiyle çok güzel sosyalleşebilir, zengin bir arkadaş çevresine sahip olabilirsiniz. Onun dengesi, uyumu, politik ve diplomatik yetenekleri sayesinde karşılıklı beslendiğiniz güzel bir ilişkiniz olabilir.",
+
+    //KADIN TERAZİ - ERKEK OĞLAK
+    "Oğlak’ın ciddiyeti, istikrarı, disiplini, kuralcılığı, planlı, programlı yapısı, keyfine, zevkine, lüksüne önem veren Terazi erkeği için oldukça can sıkıcı olabilir. Bu beraberliğin, evliliğin veya ilişkinin aşk beraberliğinin romantizminden ziyade bir iş projesi gibi resmi veya ciddi bir havada yürümesi ruhunuza pek uygun gelmeyebilir. Kuralları, disiplini ve prensipleriyle Oğlak erkeği özgür ruhunuza ters gelebilir. Yumuşaklığınız karşısında sert bir enerjiyle karşılaşabilirsiniz. Güzelliklerden zevk alırsınız, onun için ise uzun vadede adamakıllı bir plan, strateji şarttır. Kuralları, çerçeveleri size ters gelebilir. Bu ilişki zaman ve sabır gerektirir ve aslında birbirinize ne kadar mesafeli durursanız o kadar iyidir.",
+
+    //KADIN OĞLAK - ERKEK TERAZİ
+    "Sizin için başkaları tarafından ne şekilde algılandığınız, itibarınız ve prestijiniz önemlidir. Terazi burcunun kibarlığı, sakin ve dengeli güzelliği ve nezaketi bu açıdan oldukça hoşunuza gidecektir. Ancak sıkı kural ve prensiplerinizin, farkında olmadan yalnızca planlarınız çerçevesinde uyguladığınız baskının onun rahatını kaçırabileceğini unutmayın. Terazi erkeğinin kibarlığı ve zarafetiyle dikkatinizi çekmesi, başınızı döndürmesi hiç de zor değildir. Ancak bu erkek her ne kadar ılımlı ve iyimser görünse de kendi istek, beklenti ve planlarınız doğrultusunda onu yönlendirmeniz pek de kolay değildir. Aklı ve mantığıyla lider özelliklere sahiptir. Ayrıca sizin planlı, ciddi, resmi yapınız onun Venüsyen konforuyla ters düşebilir ve çatışmalar söz konusu olabilir.",
+
+    //KADIN KOVA - ERKEK TERAZİ
+    "Bu iki hava burcunun uyumu tartışılmazdır. Entelektüel anlamda bu erkekle çok iyi anlaşabilir, her türlü konudan konuşabilirsiniz. Terazi erkeğiyle yapacağınız sehayatler de oldukça keyifli geçecektir. Akıl ve mantık düzleminde Terazi ile süper anlaşırsınız. Adalete ve eşitliğe karşı son derece duyarlı Terazi, sizin toplumcu, ilerici, yenilikçi, vizyoner yönlerinizi mükemmel şekilde tamamlayacaktır. Üstelik Terazi de sosyal bir burçtur, dostluklardan, arkadaşlık ilişkilerinden haz eder. Her ne kadar siz çevrenizde daha fazla kişi ve sağlam bir sosyal çevre arasanız da Terazi’nin bire bir ilişkilerdeki diplomatik, dengeli ve uyumlu tavrından çok etkilenirsiniz. Üstelik Venüsyen cazibesi de başka bir artıdır. Güzel bir ilişkiniz olabilir.",
+
+    //KADIN TERAZİ - ERKEK KOVA
+    "Kova için içinde bulunduğu sosyal çevrenin, toplumun huzuru, refahı ve mutluluğu en az kendisininkiler kadar önemlidir. Bu uğurda engel tanımadan gerekeni yapmaya hazırdır, bu nedenle arkadaşlarını ve sosyal çevresini fazlasıyla önemser. Ayrıca orijinal fikirleri, sıra dışı yaklaşımları, akılcı yönleriyle gerçek bir vizyonerdir. Ancak çevresinde sürekli arkadaşları vardır ve çok sosyaldir. Onu arkadaşları ve sosyal amaçları ile birlikte kabul etmelisiniz. Kova erkeğinin zekâsı, parlak fikirleri, uçuk, kaçık tarzıyla aslında sizin aşktan beklentilerinizin çoğunu karşılar. Konuşmayı, paylaşmayı seven yanlarınızla çok iyi iki dost olabilirsiniz her şeyden önce. Tek sorun marjinal ve sıradışı yönlerinin sizin zarif ve kibar tarzınızla örtüşmemesi olabilir. Ayrıca onun bir Satürn erkeği olduğu dolayısıyla biraz sert ve kural sahibi olabileceğini hatırlatalım. Aşktan yana harika olabilir, ilişki için biraz daha fazlası gerekebilir.",
+
+    //KADIN TERAZİ - ERKEK BALIK
+    "Balık burcunun yumuşaklığı, hassasiyeti, duygusallığı, her zaman dolmaya hazır gözleri, yaratıcı, sanatsal özellikleri ilgi çekici ve caziptir. Buğulu bakışları, güzel ve etkileyici sesi, yumuşak dokunuşları ve sözleriyle aklınızı başından alabilir. Size romantik şiirler yazar, şarkılar yazar, gerçek bir romantik Don Juan veya Valentino olabilir ve ruhunuzu her daim okşamasını bilir. Ancak ona bakmanız, derleyip, toplamanız, yön vermeniz gerekecektir. Hayatındaki kaosu yönetmeniz için kendi konforunuzdan ne kadar ödün verebileceğinizi her zaman yaptığınız gibi iyi tartmalısınız. Aksi halde hemen her ortama ve herkese uyan yaklaşımları Balık erkeğini gözünüzde elle tutulamaz, yakalanamaz hale getirir, bir anda elinizden çoktan kaçtığını fark edebilirsiniz.",
+
+    //KADIN BALIK - ERKEK TERAZİ
+    "Sanat ve estetik sizi buluşturan etkenlerden en önemlileridir. Yaratıcılığınız ve hassasiyetiniz detayları çaktırmadan önemseyen Terazi’nin gözünden kaçmayacaktır. Oldukça romantik bir ilişki kurabilirsiniz. Ancak zaman içinde kendinizi hayallere çok fazla kaptırabilirsiniz. Terazi de ikili ilişki konusundaki ideallerinin ve beklentilerinin kölesi olabilir ve siz onun gözünde aşırı hassas görünebilirsiniz. Maddi sorunlar ortaya çıktığında krizlere açık bir ilişkiye dönüşebilir. Oysa Terazi erkeğinin estetik ve sanatsal inceliği gönlünüzü fethedebilir. Birlikte güzel ve nezih bir dost ve arkadaş çevresi edinebilir ve rafine zevkleri paylaşabilirsiniz. Çok romantik bir ilişkiniz olabilir. Hem kendinize hem etrafınıza şans dağıtabilirsiniz. Tek yapmanız gereken karşınıza çıkan zorluklar olduğunda bunlardan kaçmamak ya da farkında olarak ya da olmadan birbirinizin üstüne atmamak olabilir.",
+
+    //KADIN AKREP - ERKEK AKREP
+    "Birbirinin aynı burçlar aynı ruhsal benzerliklere sahiptir. Dolayısıyla karşınızda en az sizin kadar güçlü, mücadeleci bir erkek var. Aranızdaki tartışmaları çözülmez noktalara taşımamaya özen göstermelisiniz. Dikkat edilmesi gereken bir ilişkidir, birikilmiş duygularla bir anda kopabilir. Dişil bir burç olan Akrep’in kadında daha güçlü tezahür ettiğini unutmamalısınız. Akrep kadını olumsuz duyguları yönetmeyi bilir. Ortak maddi sorunlar, külfetler bu ilişkinin çıkmazlarından biri olabilir. Ayrıca karşılıklı olarak ilkelerinden vazgeçmeme, alışkanlıkları bırakamama, tarz ve duruşunda diretme gibi sorunlar ortaya çıkabilir.",
+
+    //KADIN AKREP - ERKEK YAY
+    "Yay erkeğinin iyimserliği ve neşesi ilişkinizi besleyecek en önemli faktörlerden biridir. Spora ve harekete merakı, sosyalliği, özgür ve herkesle barrışık ruhu kendinizi iyi hissetmenizi sağlayacaktır. Yay’ın neşesi, canlılığı, her imkana, fırsata açık duruşu, iyimserliği ve hayata olumlu bakışı sizi derin arayışlardan çekip alabilir, hayatınıza farklı perspektifler katabilir. Sizin gizemli, tutkulu yönleriniz, onun enerjisi ile birleştiğinde güzel bir ilişki doğabilir. Ancak Yay erkeğinin değişkenliğine, her şeyden kolayca geçip, farklı farklı pek çok alana yönelebilmesine, aşırı sosyalliğine uyum sağlamanız kolay değildir. Ayrıca kendinin de kontrol edemediği maddi veya manevi savrukluğu kaynaklarınızın tükenmesine neden olabilir, dikkat etmelisiniz.",
+
+    //KADIN YAY - ERKEK AKREP
+    "Akrep burcu erkeğini anlamanız hiç de kolay değildir. Sizin olayların ve kişilerin üzerinde çokça durmayan iyimser ve hoşgörülü tavrınız karşısında o her daim şüpheci ve sürekli bazı şeyleri dönüştürme ve geliştirme arzusundadır. Akrep erkeğinin derinliği, sezgileri sizin bilgeliğinizle birleştiğinde ortaya harika bir ilişki çıkarabilirsiniz. Ancak etrafınızda çok fazla kişi olması, sosyal, gelişime, değişime her daim açık kapılarınız şüpheci ve zaman zaman kıskanç Akrep’e ters gelebilir. Ama yanlış bir şey yapmadığınız sürece hiç sorun olmaz, gözleri ve hisleri her daim üzerinizde olduğundan sizi anlar ve bilir. Yine de zaman zaman farkında bile olmadığınız noktaları zorlamasıyla sizin için kolay bir ilişki olmayabilir.",
+
+    //KADIN AKREP - ERKEK OĞLAK
+    "Oğlak erkeği sabır ve metanet gerektirir. İlişkinin zorlayıcı yanı duygularınızı biriktirerek sabrınızın tükendiği noktada bir anda patlamanız olabilir. Bu erkeğe karşı duygularınızı biraz daha kontrol edebilmelisiniz. Oğlak’ın prensipleri, kuralları, ciddiyeti, resmiyeti, planları size oldukça kısıtlayıcı, daraltıcı ve zor gelebilir. Onun da sizin derinliğinizi, tutkularınızı, her şeyi kurcalamaya meyilli yapınızı anlaması pek kolay değildir. Ayrıca dışarıda önemli bulduğu daha ciddi iş, görev ve sorumlulukları olabilir ve sınırsız sorgulayıcılığınız, meraklarınız karşısında çok daha sınırlı, klasik ve gelenekçidir. Zor bir ilişki olabilir.",
+
+    //KADIN OĞLAK - ERKEK AKREP
+    "Akrep tutkulu, derin ve gizemlidir. Onu çözmek zamanınızı alsa da bir süre sonra, gereken sabrı ve vakti tanıdığınızda uyumlu bir beraberlik yakalayabilirsiniz. Onun ihtiyaçlarını, beklentilerini doğru anlamalı ve önerilerine ve söylediklerine karşı gelmeden önce iyi düşünmelisiniz. Akrep erkeğinin sadakati ve bağlılığı uzun vadede sizi tatmin edici özelliğidir. Onunla sosyalleşebilir, arkadaş çevrenizi zenginleştirebilirsiniz. Ancak sürekli hem kendini hem çevresini değiştirme çabası, bu yönde dinmek bilmeyen eleştirel ve mükemmeliyetçi bakış açısı ve huzursuzluğu rahatsız edici olabilir. Ancak onun sorgulayıcı, inatçı yapısını kendi hedef ve planlarınıza bağlarsanız bu ilişkide aradığınız başarıyı yakalayabilirsiniz.",
+
+    //KADIN KOVA - ERKEK AKREP
+    "Akrep burcu erkeğinin derinliğinden, her olayı en ince ayrıntısına kadar bilmek ve aydınlatmak isteğinden etkilenebilirsiniz. İçsel ve ruhsal zenginliği de sizi ona çekecektir. Ancak şüpheci tutumu, kıskançlığı, gizliliğe düşkünlüğü özgür bakış açınızı zorlayabilir. Akrep’in sezgileri inanılmazdır. Sizin akıl boyutunuzu, içten gelen sezgisel ve genellikle de haklı çıktığı savlarıyla, önerileriyle aslında çok iyi tamamlayabilir. Ancak Akrep erkeğinin gizemli, tehlikeli bir savaşçı olduğunu da aklınızdan çıkarmayın. Hiç ummadığınız bir yer ve anda sizin farkında bile olmadığınız ancak kendi içinde biriktirdiği duygularını dışa vurmaktan asla çekinmeyecektir. Bu da çok duygusal olmayan, akla, zekâya önem veren yapınızı sarsabilir. İlişkiyi bir rekabete taşımamanız sizin için iyi olabilir.",
+
+    //KADIN AKREP - ERKEK KOVA
+    "Kova’nın orijinal, marjinal, sıra dışı özellikleri dikkatinizden kaçmayacaktır. Ancak yenilikçi ve özgürlükçü olduğu kadar, sert, katı ve soğuk tarafları da vardır. Bu da muhtemelen daha önceki döneminde, erken yaşlarında yaşadığı sıkıntılar ve aldığı sorumluluklardan kaynaklıdır. Kolay bir ilişki değildir ancak onun bilgisinden ve tecrübelerinden çok şey öğrenebilirsiniz. Kova erkeğinin sosyal ve toplumcu yönleri, sıra dışı yaklaşımlar, sizin ise sezgisel ve metafizik gücünüz birleştiğinde birbirinizi besleyici bir ilişki yaratabilirsiniz. Ancak bunun için uğraşmanız ve onu iyice anlamanız gerekiyor.",
+
+    //KADIN AKREP - ERKEK BALIK
+    "Balık erkeği vericiliği, fedakârlığı ve sonsuz merhametiyle sizi duygusal yönden oldukça besler. Bu erkeğe kolayca aşık olabilirsiniz, o da size. Sizi bakışları, karmaşık duyguları, uyumlu yönleri, güzel sesiyle büyüleyebilir. Sizin de gizemli taraflarınız, derinliğiniz aranızda sihirli bir ilişki yaratabilir. Duygusal seviyede oldukça iyi bir ilişkidir. Maddi konuların bu sihri ve büyüyü bozmasına izin vermemelisiniz. Aranızdaki duygusal çekim ve elektrik uzun süreli bir ilişki kurmanızı sağlayabilir. Birbirinizi büyülediğiniz kadar çevrenizi de etkileyen bir çift olabilirsiniz. Akrep’in açıkları yakalayabilme gücü, Balık’ın sihirli bilgeliği tuhaf ve gizemli bir şekilde bu ilişkinin uzun sürmesini de çabukça bitmesini de sağlayabilir.",
+
+    //KADIN BALIK - ERKEK AKREP
+    "Akrep erkeğinin ruhundan iyi anlarsınız ve bu anlayışın karşılığını da bulabilirsiniz. Oldukça uyumlu bir beraberliğiniz olabilir. Ancak Akrep mücadeleden ve dramadan hoşlanır ve zaman zaman sizin iyiliksever, bağışlayıcı ve fedakâr yönleriniz ona biraz anlamsız gelebilir. Romantik açıdan oldukça uyumlu bir ilişkiniz olabilir. Akrep’in kararlılığı, hırsı, zorluklar karşısında mücadeleci yönü sizi özellikle dış etkilere karşı toparlayacaktır. Siz de spiritüel ve manevi yönlerinizle bu ilişkiyi besleyen taraf olabilirsiniz. Karşılıklı bilinmezler ve gizemlerle oldukça sihirli ve büyülü bir ilişki yaratabilirsiniz. Bu ilişkinin belki de yegâne zorluğu başkaları tarafından anlaşılmamak olabilir.",
+
+    //KADIN YAY - ERKEK YAY
+    "Yay erkeğiyle bol bol gezebilir, seyahatlere çıkabilir, felsefi, dini her türlü görüşünüzü paylaşabilirsiniz. Ancak bu ilişki bir yerlere bağlı kalamama, sınırları fazla zorlama ve abartma, akıl ve mantıkla çözülebilecek konuları görememe gibi bazı handikaplar taşır. Karşılıklı bol bol spor yapıp, gezeceğiniz oldukça dinamik ve hareketli bir ilişkiniz olabilir. Farklı yerlerde oturabilir, sıkça mekân değiştirebilir, aklınıza estiği anda, estiği şekilde yaşamak isteyebilirsiniz. Maddi konular, görev, iş ve sorumluluklar, çoluk çocuk işin içine girdiğinde oldukça zorlayıcı bir ilişkiye dönüşebilir. Bu ilişkinin sınır tanımama, çizememe, belirleyememe gibi sorunları olabilir.",
+
+    //KADIN YAY - ERKEK OĞLAK
+    "Oğlak erkeği size ihtiyaç duyduğunuz maddi güveni sağlayabilir. Size güvenilir, uzun vadeli, dayanıklı ve sağlam bir ilişki sunabilir. Ancak kuralcı ve disiplinli yapısı, lider özellikleri, sizin özgürlüğünüzü bastırabilir, iyimserliğinizi elinizden alabilir. Oğlak burcunun sıkı, kuralcı, planlı yapısı, yaşamın her türlü zenginliğinden, genişlemeden uygun yapınıza son derece kısıtlayıcı gelebilir. Birbirinizi anlamanız ve birbirinize ayak uydurmanız neredeyse imkansızdır. Yay olarak keşfetme, büyüme arzunuz Oğlak’ın sınırlı sorumlu ve bir şirket gibi yönettiği yaşamının daraltıcı yönleriyle ciddi şekilde çakışabilir.",
+
+    //KADIN OĞLAK - ERKEK YAY
+    "Yay burcu erkeğini anlamanız, onun da sizi anlaması kolay değildir. Yay erkeği maddi, manevi genişleme ve zenginleşmeden yanadır, siz ise istikrar ve kararlılık için bazı kısıtlama ve sınırlamaların getirilmesi gerektiğine inanırsınız. Dolayısıyla Yay’ın özgür yönü, sınır tanımaması ve hayatını zenginleştirecek pek çok ilgi alanına sahip olması, sınırlardan, şekillerden, şablonlardan hoşlanan yapınıza oldukça ters gelecektir. Sürekli hareket ve seyahat arayışında olması sizin tutucu yapınızla pek örtüşmeyebilir. Siz uzun vadeli, önemli ve ciddi planların, hedeflerin peşindeyken o ise hayatı tam bir macera ve keşif alanı olarak görebilir. Bu ilişkinin yürümesi oldukça zor ve meşakkatlidir.",
+
+    //KADIN KOVA - ERKEK YAY
+    "Yay erkeği hayatınıza yaşam enerjisi ve iyimserlik katarken, birlikte sosyalleşebilir, zengin bir arkadaş grubu edinebilirsiniz. Yay’ın ateşi sizi harekete geçirirken, sizin akılcılığınız ve fikirleriniz onun hayatını kolaylaştıracaktır. Üstelik neşeli ve geniş dünya görüşü, sizin vizyoner yapınızla son derece örtüşür. Ancak Yay’ın değişken yönleri, esnekliği ve sürekli hareket halinde olması, sizin istikrardan ve kararlılıktan yana taraflarınızla çelişebilir. Birbirinizi bu yönlerden tolere edebildiğiniz ölçüde, ki bunu yapabilmeniz çok da zor değildir, güzel bir ilişkiniz olabilir.",
+
+    //KADIN YAY - ERKEK KOVA
+    "Kova erkeğinin sıra dışılığı, orijinal yaklaşımları o güne kadar göremediğiniz veya farkına varamadğınız yeni kapılar açabilir size. Bunlar geniş ve zengin vizyonunuzu tamamlayan şeylerdir. Size hayatınızı zenginleştirme uğruna göz ardı ettiğiniz aklın ve mantığın yolunu hatırlatacaktır. Kova’nın değişime her daim açık ve yenilikçi fikirleri, özgürlükçü ve her türlü uçuk, kaçıklıktan hoşlanan yönleri hoşunuza gidecektir. Üstelik akılcı, zeki, toplumcu yanları bu ilişkiye farklı boyutlar katabilir. Ancak Kova'nın her şeye rağmen sert ve disiplinli bir tarafının da olduğunu unutmamalısınız.",
+
+    //KADIN BALIK - ERKEK YAY
+    "Ortak hayaller sizi bir araya getirse de Yay erkeği bu hayalleri fiziksel olarak da yaşamak, her geçen gün daha fazlasını keşfetmek isteyebilir siz ise kendi hayal aleminizde, düşlerinizle kalmayı tercih edebilirsiniz. Bu da her ne kadar aranızda çekim olsa da uzun vadeli bir birlikteliği zor kılabilir. Yay erkeği dolaylı durumlardan ve karmaşıklıktan pek haz etmez. Yüksek enerjisiyle kaosu çözmeye çalışmak ona göre bir uğraş değildir. Sportif ve fiziksel hedefleri, zevkleri vardır. Keşif ve macera ruhunu anlamadığı duygusal bir örüntüyle bezemekten kaçınacaktır. Düşündüğünü hızlı ve açık şekilde söylemekten ve ifade etmekten yanadır ve size göre çok daha gerçekçidir. Sizde ise her zaman hayalperest, gerçeklerden uzaklaşmaya, onlarla yüzleşmemeye meyilli bir taraf vardır. Zor bir ilişki olabilir.",
+
+    //KADIN YAY - ERKEK BALIK
+    "Her ikiniz için de bu ilişkiyi uzun vadede korumak ve yönetmek hiç kolay olmayabilir. Zira ilişkinin ne sınırlarını ne de hangi uca bucağa varacağını kestirmeniz oldukça güçtür. Hiç farkında olmadığınız bir anda kopup, dağılıp gidebilir, toparlamak, çeki düzen vermek her iki tarafın da umurunda olmayabilir. Balık erkeğinin duygusal yönleri, hassasiyeti ve yaratıcılığı aranızdaki ilişkiyi siz farkında olmadan besleyen unsurlardır. Ancak sizin hareket onun ise duygusal açıdan sınır tanımamazlığı ilişkinizi bir yere vardırmanızı zorlaştırabilir.",
+
+    //KADIN OĞLAK - ERKEK OĞLAK
+    "Oğlak erkeği de yine sizin hoşlandığınız ve beğendiğiniz şeylerden hoşlanır. O da sizin gibi planlı ve stratejik hareket etmeyi, ciddiyeti, resmiyeti sever. Farklı etkiler yoksa biraz soğuk ve kasvetli bir ilişki olabilir. Doğum haritalarınızın Oğlak dışındaki yönlerine karşılıklı ağırlık vererek bu ilişkiyi yürütmeniz mümkündür. Onun dışında b ilişki karşılıklı kurallar, disiplin ve planlar çerçevesinde yürüyebilir. Karşılıklı olarak ilişkinizi bir iş yönetir gibi yönetebilirsiniz. Birbirinizi çok iyi anlayabilirsiniz ama iyi anlamak, anlaşmak olmayabilir.",
+
+    //KADIN OĞLAK - ERKEK KOVA
+    "Kova erkeğinin kendi dışında arkadaşlarını, içinde bulunduğu toplumu ve ortamı gözetmesi, sosyal amaçlar için çalışması, organize olması ve emek sarf etmesi ve bundan dolayı yanında sürekli başka birilerinin de bulunması bir süre sonra kendinizi pek de özel hissetmemenize neden olabilir. Özgürlükçü ve yenilikçi yönlerine alan tanıyabildiğiniz sürece bir ilişkiniz ve beraberliğiniz olabilir. Ancak ihtiyaç duyduğunuz sıcaklığı ve şefkati onda bulmanız zor olacaktır. Kova erkeği size fazla sosyal, umutlarının peşinde, kendini bunlara adamış biri olarak fazlaca idealist gelebilir. Sizin kurallarınız da yenilikçi ve özgür ruhlu Kova için fazla daraltıcı gelebilir. Gelenekçi tarafınızı onun modern ve vizyoner yönleriyle buluşturmanız zaman ve çaba harcanması gereken bir örüntü doğurabilir.",
+
+    //KADIN KOVA - ERKEK OĞLAK
+    "Oğlak erkeğini özellikle ruhsal yönden anlamanız aslında zor değil, zira her ikiniz de belirli amaç ve hedefler doğrultusunda ilerlemekten, programdan, zamanı yönetmekten hoşlanırsınız. Üstelik disiplinli ve kuralcı yapısı, resmiyeti ve ciddiyeti aslında size özünüzde çok da ters gelen özellikler değildir. Ancak Oğlak erkeğine orijinal, sıradışı yaklaşımlarınız fazlasıyla uçuk, arkadaş çevreniz aşırı kalabalık gelebilir. Birbirinizin fikirlerine ve kurallarına saygı duyduğunuz ölçüde uyumlu bir beraberlik olabilir. Ancak yine de duygulardan yoksunluk, fikirlerin, plan ve projelerin önde olması resmi bir ilişkiyle sonuçlanabilir.",
+
+    //KADIN OĞLAK - ERKEK BALIK
+    "Balık erkeğinin dağınıklığı kuralcı ve disiplinli Oğlak burcu için oldukça zorlayıcı olabilir. Sizin disiplin arayışınız, sisteme ve düzene düşkünlüğünüz Balık erkeğine, onun romantizm ve yaratıcılığına oldukça ters düşebilir. Balık burcu bu ilişkide bir süre sonra kendini oldukça pasif ve silik hissedebilir. Ancak onun dağınıklığını toparlayabildiğiniz, karmaşık duygu dünyasına bir yön verebildiğiniz ölçüde ilişkiyi şekillendiren ve yöneten kişi siz olursunuz. Onun yaratıcı ve sanatçı yönlerini bastırmamaya gayret etmelisiniz. Zorlayıcı bir ilişki söz konusu olabilir.",
+
+    //KADIN BALIK - ERKEK OĞLAK
+    "Oğlak erkeğinin maddiyata önem veren ve ayakları fazlasıyla yere basan yönlerini duygularınız ve hassasiyetinizle dengeleyebilirsiniz. Üstelik bu erkek size ihtiyacınız olan maddi gücü ve dirayeti sağlayacaktır. Birbirinizdeki bu eksik yönleri tamamladıkça mükemmele yakın bir ilişkiniz olabilir. Ancak lider ve yönetici özellikleriyle Oğlak erkeğinin bu ilişkide baskın duruma gelebileceğini unutmayın. Ama sezgilerinizle onun kafasını karıştırabilir, farklı yönlere çekebilirsiniz. Yine de pasifize edilmemeye dikkat. Bir de bu kadar ciddi, gerçekçi, resmi bir yapıdan ne kadar hoşlanabileceğinizi iyi tartmalısınız. Oğlak burcunun kuralları, disiplini, her şeyi sınıflandırmaya ve bir şekle sokmaya çalışan yönleri sizin uçları sonsuz açık dünyanıza oldukça ters gelebilir.",
+
+    //KADIN KOVA - ERKEK KOVA
+    "Aynı burçtan iki kişinin ilişkisi kolay görünse de aslında çeşitli zorlukları beraberinde taşıyor olabilir. Her ne kadar birbirinizi en iyi siz anlasanız da bu ilişkiyi somutlaştıramamak, ayaklarını yere bastıramamak, fikirlerin havada kalması zaman içinde problem olabilir. Ancak birlikte her türlü sosyal projede yer alabilir, dernek, vakıf ve sosyal amaçlı kuruluşlarda çalışabilirsiniz. Bu tür ortamlarda karşılaşmış ve yakınlaşmış olmanız da zaten kuvvetle muhtemeldir. Ortak bir sosyal amaç ve arkadaş çevresi, ortak bir vizyon ilişkinizi ayakta ve diri tutabilir.",
+
+    //KADIN BALIK - ERKEK KOVA
+    "Siz de hayaller, Kova erkeğinde ise bolca geleceğe yönelik umutlar vardır. Üstelik bu erkek umutları söz konusu olduğunda onları gerçekleştirme konusunda da kararlıdır. İkisini birleştirdiğinizde harika bir uyum yakalayabilirsiniz. Kova erkeğinin realist ve akılcı dünyasına getireceğiniz duygusallık mükemmel bir ilişkide mükemmel uyumun kapılarını aralayacaktır. Birbirinizi anladığınız ve duygusal ve zihinsel dünyalarınızı birleştirdiğiniz anda sıcak, duygu dolu ve bir o kadar da ilham verici bir yuva kurabilirsiniz. Sosyal çevrenizin, toplumun, dünyanın, insanlığın yararına işlere, uğraşlara birlikte imza atabilirsiniz. Kendinizden çok başkalarının yararına bir ilişkiniz olabilir.",
+
+    //KADIN KOVA - ERKEK BALIK
+    "Siz toplumsal yönden Balık erkeği evrensel açıdan idealisttir. Bu idealizm anlayışı sizi birbirinize yakınlaştıran bir faktör olabilir. Uyumlu bir birlikteliğiniz olabilir. Balık burcunun yaratıcılığı, sezgileri, sanatçı yönleri ilişkinizi duygusal yönden besleyen taraflar olacaktır. Sizin de fikirleriniz, düşünsel zenginliğiniz beraberliğinize entelektüel bir zenginlik katar. Birlikte başka kişilerin iyiliğine ve hayrına olabilecek çok fazla şey yapabilirsiniz, verimli oldukça uzun süren bir beraberliğiniz olacaktır. Ancak Balık erkeğinin engin, uçsuz bucaksız, sınırsız hayal gücünde, düşlerinde, arayışlarında kaybolmamaya dikkat etmelisiniz.",
+
+    //KADIN BALIK - ERKEK BALIK
+    "İkinizin de değişken yapısı özellikle zorluklar karşısında karmaşık, içinden çıkılması imkânsız yollara sapmanıza neden olabilir. Zorluklar da her ilişki için kaçınılmazdır. Kendinizi karmaşık, her şeyin belirsiz olduğu bir ilişki denizinde hatta okyanusunda bulabilirsiniz. Spiritüel ve ruhsal anlamda harika bir ilişki olsa da maddi anlamda dış etkenlere, başka kişilerin ve olayların müdahalesine oldukça açık olabilirsiniz. Hayal gücünün ve yaratıcılığın sınırlarını zorlayan, mistik zirveye ulaşan bir beraberliğiniz olabilir. Ancak karşılıklı ihmaller, dalgınlıklar ve hatta sakarlıklar denizinde birbirinizi kaybetmemeye özen göstermelisiniz. Her ne kadar harikulade bir ilişki gibi görünse de gerçeklerle temasınızı sağlayacak bir enerjiye ve desteğe ihtiyacınız olacaktır.",
   ];
 }
+//detay 430 uyumyuzdedetay 429

@@ -1,11 +1,22 @@
+// ignore_for_file: file_names, must_be_immutable, prefer_typing_uninitialized_variables, non_constant_identifier_names
+
 import 'package:burc_rehberi/data/burc_yorum_detay.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PageCreate2 extends StatelessWidget {
   final burc;
   List<String> burcDetayBaslik = BurcDetay.BURC_GENEL_YORUM_BASLIK;
   List<String> burcDetay = [];
   PageCreate2({required String this.burc, Key? key}) : super(key: key);
+
+  TextStyle style(double size, Color colorss) {
+    return GoogleFonts.quicksand(
+      fontSize: size,
+      fontWeight: FontWeight.w900,
+      color: colorss,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +53,12 @@ class PageCreate2 extends StatelessWidget {
   Scaffold PageCreate(BuildContext context, burc, buyukburc,
       List<dynamic> burcDetayBaslik, List<dynamic> burcDetay) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
             Navigator.pushReplacementNamed(context, 'Burc Listesi');
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
             color: Colors.white,
             size: 32,
@@ -57,26 +67,19 @@ class PageCreate2 extends StatelessWidget {
         title: Text(
           burc + ' Burcu Genel Yorum',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+          style: style(21, Colors.white),
         ),
       ),
-      body: ListView.builder(
-        itemCount: burcDetayBaslik.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            color: Colors.grey,
-            child: ExpansionTile(
+      body: Container(
+        decoration: DecorationCreate(),
+        child: ListView.builder(
+          itemCount: burcDetayBaslik.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ExpansionTile(
               backgroundColor: Colors.orange,
               title: Text(
                 (buyukburc + burcDetayBaslik[index]),
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 20,
-                ),
+                style: style(20, Colors.deepPurple.shade900),
                 textAlign: TextAlign.center,
               ),
               leading: IconCreate(Icons.notes_rounded),
@@ -86,17 +89,13 @@ class PageCreate2 extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     burcDetay[index],
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                    style: style(18, Colors.white),
                   ),
                 ),
               ],
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
@@ -106,6 +105,16 @@ class PageCreate2 extends StatelessWidget {
       icons,
       size: 35,
       color: Colors.white,
+    );
+  }
+
+  BoxDecoration DecorationCreate() {
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [Colors.purple, Colors.orangeAccent],
+      ),
     );
   }
 }

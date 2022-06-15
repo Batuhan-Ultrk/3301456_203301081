@@ -1,55 +1,123 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class DrawePage extends StatelessWidget {
-  var bilgiler;
-  DrawePage({required this.bilgiler, Key? key}) : super(key: key);
+class DrawePage extends StatefulWidget {
+  const DrawePage({Key? key}) : super(key: key);
+
+  @override
+  State<DrawePage> createState() => _DrawePageState();
+}
+
+class _DrawePageState extends State<DrawePage>
+    with SingleTickerProviderStateMixin {
+  late String _EMail,
+      _Username,
+      _PhoneNumber,
+      _Gender,
+      _DateOfBirth,
+      _Age,
+      _Burc,
+      _AboutMe,
+      _dateofregistration;
+  final List basliklar = [
+    'E Mail',
+    'Username',
+    'Phone Number',
+    'Gender',
+    'Date Of Birth',
+    'Age',
+    'Burç',
+    'About Me',
+    'date of registration',
+  ];
+  String userNameBaslik = "";
+
+  FirebaseAuth auth = FirebaseAuth.instance;
+  late Animation animationDrawer;
+  late AnimationController controller;
+
+  @override
+  void initState() {
+    localDataRead();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+
+    controller.addListener(() {
+      setState(() {});
+    });
+
+    controller.forward();
+    controller.addStatusListener((durum) {
+      if (durum == AnimationStatus.completed) {
+        controller.reverse().orCancel;
+      } else if (durum == AnimationStatus.dismissed) {
+        controller.forward().orCancel;
+      }
+    });
+
+    animationDrawer = ColorTween(begin: Colors.white, end: Colors.cyan.shade200)
+        .animate(
+            CurvedAnimation(parent: controller, curve: Curves.bounceInOut));
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    print(bilgiler);
     return GestureDetector(
       onTap: () {
-        Navigator.pop(context, bilgiler);
-        print(bilgiler);
+        Navigator.pop(context);
       },
       child: Drawer(
-        backgroundColor: Colors.yellow.shade100,
+        backgroundColor: Colors.transparent,
         child: ListView(
           children: [
             DrawerHeader(
               child: Column(
                 children: [
                   Divider(
-                    color: Colors.blue,
-                    height: 10,
+                    color: animationDrawer.value,
+                    height: 28,
+                    indent: 130,
+                    thickness: 8,
                   ),
-                  RowCreateStars(),
                   RowCreate('BURÇ REHBERİ', 25),
-                  RowCreate('Burçlarla İlgili Her Şey', 15),
-                  RowCreateStars(),
+                  RowCreate('Burçlarla İlgili Her Şey', 20),
                   Divider(
-                    color: Colors.blue,
-                    height: 10,
+                    color: animationDrawer.value,
+                    height: 28,
+                    indent: 8,
+                    endIndent: 130,
+                    thickness: 8,
                   ),
+                  RowCreate(userNameBaslik, 15),
                 ],
               ),
-              decoration: BoxDecoration(
-                color: Colors.orange,
-              ),
+              decoration: DecorationCreate(),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                color: Colors.orange.shade600,
+                decoration: DecorationCreate(),
                 child: ExpansionTile(
                   title: Text(
                     'BURÇLARLA İLGİLİ DAHA FAZLASI',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                    style: style(17, Colors.white),
                     textAlign: TextAlign.center,
                   ),
                   leading: IconCreate(),
@@ -61,6 +129,11 @@ class DrawePage extends StatelessWidget {
                         'Burc Grubu'),
                     CreateCard(context, Icons.category_outlined, 'BURÇ DİYETİ',
                         'Burc Diyeti'),
+                    CreateCard(context, Icons.category_outlined, 'MİTOLOJİ',
+                        'Mitoloji'),
+                    const SizedBox(
+                      height: 30,
+                    ),
                   ],
                 ),
               ),
@@ -71,6 +144,9 @@ class DrawePage extends StatelessWidget {
                 context, Icons.account_circle_sharp, 'GİRİŞ', 'Login Page'),
             CreateCard(
                 context, Icons.account_box_rounded, 'PROFİL', 'Profile Page'),
+            CreateCard(context, Icons.data_saver_on_rounded, 'KAYIT OL',
+                'Sign Up Page'),
+            CreateCard(context, Icons.delete, 'KAYIT SİL', 'Kayıt Delete'),
             CreateCard(context, Icons.exit_to_app_rounded, 'GÜVENLİ ÇIKIŞ',
                 'Safe Exit'),
           ],
@@ -79,11 +155,30 @@ class DrawePage extends StatelessWidget {
     );
   }
 
+  BoxDecoration DecorationCreate() {
+    return BoxDecoration(
+      gradient: const LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [Colors.purple, Colors.orangeAccent],
+      ),
+      boxShadow: const [
+        BoxShadow(
+          color: Colors.cyan,
+          offset: Offset(-10, 5),
+          blurRadius: 8.0,
+          spreadRadius: 1.0,
+        ), //BoxShadow
+      ],
+      borderRadius: BorderRadius.circular(70),
+    );
+  }
+
   Icon IconCreate() {
-    return Icon(
+    return const Icon(
       Icons.arrow_drop_down_circle_outlined,
       size: 25,
-      color: Colors.yellow.shade200,
+      color: Colors.yellow,
     );
   }
 
@@ -91,66 +186,78 @@ class DrawePage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          // padding: EdgeInsets.all(8),
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
+        Text(
+          text,
+          style: style(size, Colors.white),
         ),
       ],
     );
   }
 
-  Row RowCreateStars() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        StarsIkons(),
-        StarsIkons(),
-      ],
-    );
-  }
-
-  Icon StarsIkons() {
-    return Icon(
-      Icons.star_border_purple500_sharp,
-      size: 35,
-      color: Colors.yellow,
-    );
-  }
-
   Card CreateCard(context, IconData shape, String page, String LongText) {
     return Card(
-      margin: EdgeInsets.all(8),
+      shadowColor: Colors.transparent,
+      margin: const EdgeInsets.all(8),
       elevation: 15,
-      color: Colors.orange,
+      color: Colors.cyan.withOpacity(0.8),
       child: ListTile(
         onLongPress: () {
           EasyLoading.showToast(
             LongText,
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
             toastPosition: EasyLoadingToastPosition.center,
           );
         },
         onTap: () async {
-          if ((bilgiler == null || bilgiler![0] == '0') &&
-              (page == 'GİRİŞ' || page == 'PROFİL')) {
-            bilgiler = await Navigator.pushNamed(context, 'Login Page') as List;
+          List<String> detay = [
+            _EMail,
+            _Username,
+            _PhoneNumber,
+            _Gender,
+            _DateOfBirth,
+            _Age,
+            _Burc,
+            _AboutMe,
+            _dateofregistration
+          ];
 
-            //  Navigator.pushNamed(context, 'Login Page', arguments: bilgiler);
-          } else if (page == 'PROFİL') {
-            Navigator.pushNamed(context, 'Profile Page', arguments: bilgiler);
+          if (page == 'PROFİL') {
+            if (detay[0] == '') {
+              Navigator.pushNamed(context, 'Login Page');
+            } else {
+              Navigator.pushNamed(context, 'Profile Page', arguments: detay);
+            }
           } else if (page == 'GİRİŞ') {
-            UyariAlertDialogCreate(
-              context,
-            );
+            if (detay[0] == '') {
+              Navigator.pushNamed(context, 'Login Page');
+            } else {
+              UyariAlertDialogCreate(
+                context,
+              );
+            }
           } else if (page == 'GÜVENLİ ÇIKIŞ') {
             exit(0);
+          } else if (page == 'KAYIT SİL') {
+            if (auth.currentUser != null) {
+              await auth.currentUser!.delete();
+              localDataClearSave();
+              firebaseDataDelete(detay);
+              EasyLoading.showToast(
+                'Kullanıcı Başarıyla Silinmiştir.',
+                duration: const Duration(
+                  seconds: 3,
+                ),
+                toastPosition: EasyLoadingToastPosition.center,
+              );
+            } else {
+              EasyLoading.showToast(
+                'Kullanıcı Girişi Yapmanız Gerekmektedir.',
+                duration: const Duration(
+                  seconds: 3,
+                ),
+                toastPosition: EasyLoadingToastPosition.center,
+              );
+            }
           } else {
             Navigator.pushReplacementNamed(context, LongText);
           }
@@ -158,17 +265,13 @@ class DrawePage extends StatelessWidget {
         leading: Icon(
           shape,
           size: 25,
-          color: Colors.yellow.shade200,
+          color: Colors.yellow,
         ),
         title: Text(
           page,
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.white,
-            fontWeight: FontWeight.w900,
-          ),
+          style: style(17, Colors.white),
         ),
-        trailing: Icon(
+        trailing: const Icon(
           Icons.arrow_forward_ios,
           color: Colors.white,
           size: 20,
@@ -177,62 +280,38 @@ class DrawePage extends StatelessWidget {
     );
   }
 
+  TextStyle style(double size, Color colors) {
+    return GoogleFonts.quicksand(
+        fontSize: size, fontWeight: FontWeight.w900, color: colors);
+  }
+
   void UyariAlertDialogCreate(context) {
     showDialog(
-      barrierColor: Colors.orange.shade900,
+      barrierColor: Colors.black87,
       context: context,
       builder: (builder) => AlertDialog(
         title: Text(
           "UYARI!",
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
+          style: style(25, Colors.red),
+          textAlign: TextAlign.center,
         ),
         content: Text(
-          'Giriş bilgileriniz bulunmaktadır. Tekrar giriş yapmak için uygulamadan çıkış yapınız...',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
+          'Giriş bilgileriniz bulunmaktadır. Tekrar giriş yapmak için uygulamadan çıkış yapmanız gerekmetedir...',
+          textAlign: TextAlign.center,
+          style: style(20, Colors.black),
         ),
         actions: <Widget>[
           Center(
               child: Column(
             children: [
               ElevatedButton.icon(
-                label: Text("UYGULAMADAN ÇIK"),
-                icon: Icon(
-                  Icons.exit_to_app_rounded,
-                ),
-                onPressed: () {
-                  exit(0);
-                },
-              ),
-              ElevatedButton.icon(
-                label: Text("PROFİLE GİT"),
-                icon: Icon(
-                  Icons.account_circle_sharp,
-                ),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    'Profile Page',
-                    arguments: bilgiler,
-                  );
-                },
-              ),
-              ElevatedButton.icon(
-                label: Text("GERİ DÖN"),
-                icon: Icon(
+                label: const Text("GERİ DÖN"),
+                icon: const Icon(
                   Icons.arrow_back_ios_new,
                 ),
                 onPressed: () {
-                  var kontrol;
                   Navigator.pop(
                     context,
-                    kontrol,
                   );
                 },
               ),
@@ -241,5 +320,38 @@ class DrawePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  localDataRead() async {
+    var preferences = const FlutterSecureStorage();
+    _EMail = await preferences.read(key: 'E Mail') ?? "";
+    _Username = await preferences.read(key: 'Username') ?? "";
+    _PhoneNumber = await preferences.read(key: 'Phone Number') ?? "";
+    _Gender = await preferences.read(key: 'Gender') ?? "";
+    _DateOfBirth = await preferences.read(key: 'Date Of Birth') ?? "";
+    _Age = await preferences.read(key: 'Age') ?? "";
+    _Burc = await preferences.read(key: 'Burç') ?? "";
+    _AboutMe = await preferences.read(key: 'About Me') ?? "";
+    _dateofregistration =
+        await preferences.read(key: 'date of registration') ?? "";
+    if (_Username == "") {
+      userNameBaslik = 'Lütfen Giriş Yapınız...';
+    } else {
+      userNameBaslik = 'Hoşgeldin $_Username';
+    }
+    setState(() {});
+  }
+
+  localDataClearSave() async {
+    var preferences = const FlutterSecureStorage();
+
+    for (var i = 0; i < basliklar.length; i++) {
+      await preferences.write(key: basliklar[i], value: '');
+    }
+  }
+
+  Future<void> firebaseDataDelete(List<String> detay) async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    await firestore.doc('users/${detay[0]}').delete();
   }
 }

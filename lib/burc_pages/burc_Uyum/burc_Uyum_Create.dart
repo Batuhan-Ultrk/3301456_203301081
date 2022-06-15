@@ -1,20 +1,45 @@
+// ignore_for_file: file_names, prefer_typing_uninitialized_variables, non_constant_identifier_names
+
 import 'package:burc_rehberi/data/burc_uyum_detay.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BurcUyumCreate extends StatelessWidget {
   final index;
   const BurcUyumCreate({required this.index, Key? key}) : super(key: key);
 
+  TextStyle style(double size, Color colorss) {
+    return GoogleFonts.quicksand(
+      fontSize: size,
+      fontWeight: FontWeight.w900,
+      color: colorss,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.white,
+            size: 27,
+          ),
+          onPressed: () {
+            Navigator.pushReplacementNamed(
+              context,
+              'Burc Uyumu',
+            );
+          },
+        ),
         title: Text(
           BurcUyum.UYUM_AD[index],
+          style: style(16, Colors.black),
         ),
       ),
       body: Container(
-        color: Colors.red,
+        decoration: DecorationCreate(),
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: ListView(
@@ -43,14 +68,10 @@ class BurcUyumCreate extends StatelessWidget {
 
   Widget Create(index, String textTitle, String text) {
     return ExpansionTile(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.transparent,
       title: Text(
         textTitle,
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w900,
-          fontSize: 20,
-        ),
+        style: style(20, Colors.white),
         textAlign: TextAlign.center,
       ),
       leading: IconCreate(
@@ -64,11 +85,7 @@ class BurcUyumCreate extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: Text(
             text,
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: Colors.black,
-            ),
+            style: style(18, Colors.black),
           ),
         ),
       ],
@@ -79,7 +96,17 @@ class BurcUyumCreate extends StatelessWidget {
     return Icon(
       icons,
       size: 35,
-      color: Colors.yellow,
+      color: Colors.indigo,
+    );
+  }
+
+  BoxDecoration DecorationCreate() {
+    return const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [Colors.purple, Colors.orangeAccent],
+      ),
     );
   }
 }
